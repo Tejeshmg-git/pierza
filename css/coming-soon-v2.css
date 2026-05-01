@@ -1,0 +1,287 @@
+/* Coming Soon V2 - Centered Minimalist */
+
+.coming-soon-v2 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-deep);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: var(--color-text-primary);
+}
+
+.cs-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.cs-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+    max-width: 800px;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.cs-brand-group {
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Horizontal Countdown - Centered */
+.cs-timer-row {
+    display: flex;
+    gap: var(--spacing-xl);
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.timer-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.timer-unit .val {
+    font-size: clamp(48px, 10vw, 100px);
+    font-weight: 800;
+    line-height: 1;
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+}
+
+.timer-unit .lbl {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: 0.6;
+    font-weight: 700;
+}
+
+/* Welcome Text - Centered */
+.cs-welcome {
+    max-width: 600px;
+}
+
+.cs-welcome h2 {
+    font-size: 36px;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cs-welcome p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+/* Status Bar Styling */
+.status-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.status-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    color: var(--color-text-secondary);
+    font-weight: 700;
+}
+
+.status-bar {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.status-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent), #4285F4);
+    width: 88%;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Waitlist Form Styling */
+.waitlist-group {
+    width: 100%;
+    max-width: 600px;
+}
+
+.waitlist-form {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.waitlist-form input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(229, 229, 229, 0.1);
+    padding: 16px 24px;
+    border-radius: 100px;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.waitlist-form input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.waitlist-btn {
+    padding: 16px 32px;
+    background-color: var(--color-accent);
+    color: var(--color-bg-deep);
+    border: none;
+    border-radius: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+.waitlist-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+.waitlist-note {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+}
+
+/* Hide Dial in Centered Layout */
+.cs-dial-container {
+    display: none;
+}
+
+/* Footer - Centered */
+.cs-footer {
+    padding: var(--spacing-md);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.cs-socials {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.cs-socials a {
+    color: var(--color-text-primary);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.cs-socials a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.cs-copyright {
+    font-size: 11px;
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .cs-timer-row {
+        gap: var(--spacing-md);
+    }
+    .timer-unit .val {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cs-content-wrapper {
+        padding: 40px 20px;
+    }
+
+    .cs-left {
+        gap: var(--spacing-lg);
+        width: 100% !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .cs-timer-row {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .timer-unit .val {
+        font-size: 36px;
+    }
+
+    .timer-unit .lbl {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .cs-welcome h2 {
+        font-size: 24px;
+    }
+
+    .cs-welcome p {
+        font-size: 15px;
+    }
+
+    .status-wrapper {
+        max-width: 100%;
+    }
+
+    .waitlist-form {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .waitlist-form input {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .waitlist-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}

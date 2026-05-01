@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierza Studio | Premium Body Piercing & Fine Jewelry</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css?v=1.1">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">HOME V1</a>
+                <a href="index-v2.html" class="nav-link">HOME V2</a>
+                <a href="pages/about.html" class="nav-link">ABOUT</a>
+                <a href="pages/portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="pages/shop.html" class="nav-link">SHOP</a>
+                <a href="pages/contact.html" class="nav-link">CONTACT</a>
+                <a href="pages/dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="pages/login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="pages/login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="eyebrow text-accent">Est. 2024</span>
+                <h1>PIERZA STUDIO</h1>
+                <p class="hero-tagline">Artistry. Elegance. Excellence.</p>
+                <div class="hero-actions">
+                    <a href="pages/contact.html" class="btn btn-primary">Book Appointment</a>
+                    <a href="pages/shop.html" class="btn btn-secondary">Explore Jewelry</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. The Art of the Aura (Philosophy) -->
+        <section class="philosophy">
+            <div class="container">
+                <div class="philosophy-wrapper">
+                    <div class="philosophy-bg-text">AURA</div>
+                    
+                    <div class="philosophy-content">
+                        <span class="eyebrow text-accent">Our Philosophy</span>
+                        <h2 class="section-title">The Art of the Aura</h2>
+                        <p class="philosophy-lead">
+                            At Pierza, we believe body piercing is more than a procedure—it’s a curated ritual of self-expression. 
+                            Combining medical-grade safety with high-fashion artistry, we create timeless curations that reflect your unique identity.
+                        </p>
+                        <div class="philosophy-signature">
+                            <a href="pages/about.html" class="btn btn-outline">Discover Our Story</a>
+                        </div>
+                    </div>
+                </div
+             </div>
+        </section>
+
+        <!-- 3. Featured Collections -->
+        <section class="collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Collections</h2>
+                    <a href="pages/shop.html" class="btn btn-sm btn-outline desktop-only">View All</a>
+                </div>
+                
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-img-wrapper placeholder-img">
+                            <img src="assets/images/home-v1/The Aurum Series.jpg" alt="The Aurum Series">
+                        </div>
+                        <div class="collection-info">
+                            <h3>The Aurum Series</h3>
+                            <p>18k Solid Gold</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-img-wrapper placeholder-img">
+                            <img src="assets/images/home-v1/Celestial Titanium.jpg" alt="Celestial Titanium">
+                        </div>
+                        <div class="collection-info">
+                            <h3>Celestial Titanium</h3>
+                            <p>ASTM F-136 Implant Grade</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-img-wrapper placeholder-img">
+                            <img src="assets/images/home-v1/Artisan Diamonds.jpg" alt="Artisan Diamonds">
+                        </div>
+                        <div class="collection-info">
+                            <h3>Artisan Diamonds</h3>
+                            <p>Ethically Sourced</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer mobile-only">
+                    <a href="pages/shop.html" class="btn btn-outline">View All Collections</a>
+                </div>
+            </div>
+        </section>
+        <!-- 4. Ear Curation Art (Portfolio Preview) -->
+        <section class="portfolio-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The Art of Curation</h2>
+                    <a href="pages/portfolio.html" class="btn btn-sm btn-outline desktop-only">Full Portfolio</a>
+                </div>
+                
+                <div class="portfolio-asymmetric-grid">
+                    <div class="portfolio-item large placeholder-img">
+                        <img src="assets/images/home-v1/ear-mapping.jpg" alt="Ear Mapping">
+                        <div class="item-overlay"><span>Ear Mapping</span></div>
+                    </div>
+                    <div class="portfolio-item placeholder-img">
+                        <img src="assets/images/home-v1/titanium-helix.jpg" alt="Titanium Helix">
+                        <div class="item-overlay"><span>Titanium Helix</span></div>
+                    </div>
+                    <div class="portfolio-item placeholder-img">
+                        <img src="assets/images/home-v1/gold-lobe.jpg" alt="Gold Lobe">
+                        <div class="item-overlay"><span>Gold Lobe</span></div>
+                    </div>
+                </div>
+
+                <div class="section-footer mobile-only">
+                    <a href="pages/portfolio.html" class="btn btn-outline">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. The Studio Ritual -->
+        <section class="studio-ritual">
+            <div class="container ritual-wrapper">
+                <div class="ritual-image placeholder-img">
+                    <img src="assets/images/home-v1/ritual-excellence.jpg" alt="A Ritual of Excellence">
+                </div>
+                <div class="ritual-text">
+                    <span class="eyebrow text-accent">Experience</span>
+                    <h2 class="section-title">A Ritual of Excellence</h2>
+                    <p>
+                        Your journey at Pierza is a private, refined experience. Every piercing session takes place in a medical-grade sterile environment, 
+                        designed to feel like a high-end fashion studio. We prioritize your comfort and the longevity of your curation.
+                    </p>
+                    <ul class="ritual-list">
+                        <li>
+                            <i data-lucide="shield-check"></i>
+                            <span>Private consultation rooms</span>
+                        </li>
+                        <li>
+                            <i data-lucide="zap"></i>
+                            <span>Single-use medical tools</span>
+                        </li>
+                        <li>
+                            <i data-lucide="package"></i>
+                            <span>Premium aftercare kits</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Signature Services -->
+        <section class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Signature Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="card-header">
+                            <span class="service-number">01</span>
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3>Anatomy</h3>
+                        <p>Detailed analysis of your unique anatomy to plan the perfect jewelry placement and curation.</p>
+                        <a href="pages/contact.html" class="btn btn-sm btn-outline">Book Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-header">
+                            <span class="service-number">02</span>
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3>Styling</h3>
+                        <p>Upgrade your look with a curated selection from our exclusive collection of fine jewelry.</p>
+                        <a href="pages/contact.html" class="btn btn-sm btn-outline">Book Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-header">
+                            <span class="service-number">03</span>
+                            <i data-lucide="gem"></i>
+                        </div>
+                        <h3>Piercing</h3>
+                        <p>Expert piercing using implant-grade titanium or 18k solid gold for a safe healing process.</p>
+                        <a href="pages/contact.html" class="btn btn-sm btn-outline">Book Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-header">
+                            <span class="service-number">04</span>
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h3>Healing</h3>
+                        <p>Professional guidance and support throughout your journey to ensure a perfect piercing maturation.</p>
+                        <a href="pages/contact.html" class="btn btn-sm btn-outline">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 7. Artist Showcase -->
+        <section class="artist-showcase">
+            <div class="container artist-wrapper">
+                <div class="artist-text">
+                    <span class="eyebrow text-accent">Artisans</span>
+                    <h2 class="section-title">Mastery in Every Detail</h2>
+                    
+                    <div class="quote-container">
+                        <p class="artist-quote">
+                            <span class="quote-mark open">“</span>
+                            Piercing is the delicate balance between human anatomy and sculptural art. We don't just place jewelry; we curate a legacy.
+                            <span class="quote-mark close">”</span>
+                        </p>
+                    </div>
+
+                    <div class="artist-identity">
+                        <div class="identity-line"></div>
+                        <div class="artist-info">
+                            <span class="artist-signature">Elena Rossi</span>
+                            <span class="artist-title">Lead Curation Artist</span>
+                        </div>
+                    </div>
+
+                    <a href="pages/about.html" class="btn btn-outline">Meet the Artists</a>
+                </div>
+                <div class="artist-image placeholder-img">
+                    <img src="assets/images/home-v1/Elena Rossi.jpg" alt="Elena Rossi">
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Booking Command -->
+        <section class="booking-cta">
+            <div class="container">
+                <div class="cta-card">
+                    <!-- Background Patterns -->
+                    <div class="precision-grid"></div>
+                    <div class="glow-orb"></div>
+                    
+                    <div class="cta-badges">
+                        <span class="cta-badge">Certified Studio</span>
+                        <span class="cta-badge">Medical Grade</span>
+                        <span class="cta-badge">Private</span>
+                    </div>
+
+                    <div class="cta-main">
+                        <div class="cta-content">
+                            <h2>Elevate Your Aesthetic</h2>
+                            <p>Private sessions are limited to ensure the highest standards of precision and care. Secure your place in our studio today.</p>
+                        </div>
+                        <div class="cta-action">
+                            <a href="pages/contact.html" class="pill-btn">
+                                <span>Book Appointment</span>
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cta-trust-bar">
+                        <div class="trust-item"><i data-lucide="check-circle"></i> Implant Grade Titanium</div>
+                        <div class="trust-item"><i data-lucide="check-circle"></i> Sterile Environment</div>
+                        <div class="trust-item"><i data-lucide="check-circle"></i> Lifetime Aftercare</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. The Feed (Social) -->
+        <section class="social-feed">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">The Curation Gallery</h2>
+                    <a href="#" class="gold-link desktop-only">@PIERZASTUDIO</a>
+                </div>
+                <div class="instagram-grid">
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-01.jpg" alt="Gallery 1"></div>
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-02.jpg" alt="Gallery 2"></div>
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-03.jpg" alt="Gallery 3"></div>
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-04.jpg" alt="Gallery 4"></div>
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-05.jpg" alt="Gallery 5"></div>
+                    <div class="insta-item placeholder-img"><img src="assets/images/home-v1/Gallery-06.jpg" alt="Gallery 6"></div>
+                </div>
+
+                <div class="section-footer mobile-only">
+                    <a href="#" class="gold-link">@PIERZASTUDIO</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home V1</a>
+                <a href="index-v2.html">Home V2</a>
+                <a href="pages/shop.html">Shop</a>
+                <a href="pages/404.html">404 Error</a>
+                <a href="pages/coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="pages/about.html">About</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/portfolio.html">Portfolio</a>
+                <a href="pages/dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

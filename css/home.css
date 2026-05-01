@@ -1,0 +1,917 @@
+/* 1. Hero Section */
+.hero {
+  min-height: var(--hero-min-height);
+  height: auto;
+  padding-top: var(--navbar-height);
+  padding-bottom: var(--spacing-xxl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/home-v1/herosection-img.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: var(--fs-small);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.hero-tagline {
+  font-size: var(--fs-h4);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.hero .btn-secondary {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.hero .btn-secondary:hover {
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}
+
+/* 3. The Art of the Aura */
+.philosophy {
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+  background-color: var(--color-bg-deep);
+  overflow: hidden;
+}
+
+.philosophy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.philosophy-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 300px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  opacity: 0.02;
+  letter-spacing: 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.philosophy-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.philosophy-content .section-title {
+  margin: 0 auto;
+}
+
+.philosophy-lead {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-md) auto var(--spacing-xl);
+  font-style: italic;
+  max-width: 800px;
+}
+
+.philosophy-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.sig-line {
+  width: 1px;
+  height: 50px;
+  background-color: var(--color-accent);
+}
+
+/* 3. Featured Collections */
+.collections {
+  padding: var(--spacing-xxl) 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.collection-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.collection-img-wrapper {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.collection-card:hover .collection-img-wrapper {
+  opacity: 0.8;
+}
+
+.collection-info h3 {
+  font-size: 24px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.collection-info p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 4. Portfolio Preview */
+.portfolio-preview {
+  padding: var(--spacing-xxl) 0;
+}
+
+.portfolio-asymmetric-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 300px);
+  gap: var(--spacing-lg);
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item.large {
+  grid-row: span 2;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 11, 11, 0.6); /* Increased for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item-overlay span {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFFFFF; /* Forced white for Light Mode visibility */
+}
+
+.portfolio-item:hover {
+  opacity: 0.9;
+}
+
+.portfolio-item:hover .item-overlay {
+  opacity: 1;
+}
+
+/* 5. Studio Ritual */
+.studio-ritual {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-bg-soft);
+}
+
+.ritual-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--spacing-xxl);
+  align-items: center;
+}
+
+.ritual-image {
+  width: 100%; /* Ensure visibility in grid */
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  justify-self: center;
+}
+
+.ritual-text p {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.ritual-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(229, 229, 229, 0.1);
+  margin-top: var(--spacing-lg);
+}
+
+.ritual-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.1);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+}
+
+.ritual-list li i {
+  color: var(--color-accent);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  transition: var(--transition-fast);
+}
+
+.ritual-list li:hover {
+  color: var(--color-text-primary);
+  padding-left: 8px;
+}
+
+.ritual-list li:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 6. Signature Services */
+.services {
+  padding: var(--spacing-xxl) 0;
+  margin: var(--spacing-xxl) 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.service-card {
+  padding: var(--spacing-xl) 0;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid rgba(229, 229, 229, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transition: width 0.5s ease;
+}
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  color: var(--color-accent);
+  opacity: 0.8;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.service-card i {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  transition: var(--transition-fast);
+}
+
+.service-card:hover i {
+  color: var(--color-accent);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.service-card h3 {
+  font-size: var(--fs-h3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  min-height: 1.2em; /* Ensures 1 line of space for single-word titles */
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-card p {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  flex-grow: 1;
+  max-width: 90%;
+}
+
+.service-card .gold-link {
+  margin-top: var(--spacing-md);
+  align-self: flex-start;
+}
+
+.service-card.active {
+  border-top-color: var(--color-accent);
+}
+
+.service-card.active i {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .ritual-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .ritual-list {
+    align-items: center;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-asymmetric-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .portfolio-item.large {
+    grid-row: auto;
+  }
+}
+
+/* 7. Artist Showcase */
+.artist-showcase {
+  padding: var(--spacing-xxl) 0;
+}
+
+.artist-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-xxl);
+  align-items: center;
+}
+
+.artist-text {
+  order: 1;
+  position: relative;
+}
+
+.quote-container {
+  position: relative;
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.artist-quote {
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+.quote-mark {
+  position: absolute;
+  font-family: var(--font-heading);
+  font-size: 100px;
+  color: var(--color-accent);
+  opacity: 0.1;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.quote-mark.open {
+  top: -40px;
+  left: -30px;
+}
+
+.quote-mark.close {
+  bottom: -40px;
+  right: 10%;
+}
+
+.artist-identity {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.identity-line {
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-accent);
+  opacity: 0.5;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artist-signature {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 32px;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.artist-title {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.artist-image {
+  order: 2;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: visible;
+}
+
+.artist-image::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+  border: 1px solid var(--color-accent);
+  opacity: 0.2;
+  z-index: -1;
+  transition: var(--transition-fast);
+}
+
+.artist-image:hover::before {
+  top: 10px;
+  left: 10px;
+  right: -10px;
+  bottom: -10px;
+  opacity: 0.5;
+}
+
+/* 8. Booking CTA (Enhanced) */
+.booking-cta {
+  padding: var(--spacing-xxl) 0;
+}
+
+.cta-card {
+  background: var(--color-bg-soft);
+  border-radius: 32px;
+  padding: var(--spacing-xxl);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--color-text-primary);
+}
+
+.cta-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-badges {
+  display: flex;
+  gap: var(--spacing-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.cta-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.cta-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content {
+  max-width: 60%;
+}
+
+.cta-content h2 {
+  font-size: var(--fs-h1); /* Larger for impact */
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+.cta-content p {
+  color: var(--color-text-secondary);
+}
+
+.cta-action {
+  display: flex;
+  align-items: center;
+}
+
+.pill-btn {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-deep);
+  padding: 20px 40px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: var(--transition-fast);
+}
+
+.pill-btn i {
+  transition: transform 0.3s ease;
+}
+
+.pill-btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.pill-btn:hover i {
+  transform: translateX(5px);
+}
+
+.cta-trust-bar {
+  display: flex;
+  gap: var(--spacing-xl);
+  border-top: 1px solid rgba(229, 229, 229, 0.05);
+  padding-top: var(--spacing-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.trust-item {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trust-item i {
+  color: var(--color-accent);
+  width: 14px;
+}
+
+/* Background Effects */
+.precision-grid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+  mask-image: radial-gradient(circle at center, black, transparent);
+}
+
+.glow-orb {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulseGlow 8s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+  100% { transform: scale(1.2) translate(-20px, 20px); opacity: 0.8; }
+}
+
+@media (max-width: 900px) {
+  .cta-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+  }
+  .cta-content {
+    max-width: 100%;
+  }
+  .cta-trust-bar {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Home V1 Mobile Protocol (320px - 767px) */
+@media (max-width: 767px) {
+  .booking-cta {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .cta-card {
+    padding: var(--spacing-lg);
+    border-radius: 16px;
+    gap: var(--spacing-lg);
+  }
+
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .pill-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-trust-bar {
+    gap: 8px;
+  }
+
+  .trust-item {
+    font-size: 10px;
+  }
+
+  .cta-badges {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Philosophy & Quotes Shrinkage */
+  .philosophy-lead,
+  .artist-quote {
+    font-size: 22px !important;
+    line-height: 1.5;
+  }
+
+  .philosophy-bg-text {
+    font-size: 150px;
+  }
+
+  .quote-mark {
+    font-size: 60px;
+  }
+
+  /* Artisan Section & Gallery Fixes */
+  .artist-showcase {
+    overflow: hidden !important;
+  }
+  .artist-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .artist-image {
+    order: -1 !important;
+    max-width: 90% !important;
+    margin: 0 auto 30px !important;
+  }
+  .artist-image::before {
+    right: -10px !important;
+    bottom: -10px !important;
+  }
+  .artist-text {
+    text-align: center !important;
+  }
+  .artist-identity {
+    justify-content: center !important;
+  }
+
+  .portfolio-asymmetric-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+  .portfolio-item, .portfolio-item.large {
+    width: 100% !important;
+    height: 400px !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* Social Feed / The Curation Gallery Vertical Stack */
+  .instagram-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .insta-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1/1 !important;
+  }
+}
+
+/* 9. Social Feed */
+.social-feed {
+  padding: var(--spacing-xxl) 0;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.insta-item {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.insta-item:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   Home V1 Tablet Protocol (768px - 1023px) - Horizontal Preference
+   ========================================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero h1 { font-size: 42px; }
+  .hero-tagline { font-size: 14px; letter-spacing: 5px; }
+
+  .collections-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .collection-info h3 { font-size: 18px; }
+
+  .ritual-wrapper {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    text-align: left;
+  }
+  .ritual-image { max-width: 100%; margin: 0; }
+  .ritual-text { text-align: left; }
+  .ritual-list { align-items: flex-start; }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 is too dense for 768px, 2 is the horizontal compromise */
+    gap: 30px;
+  }
+
+  .artist-wrapper {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+  }
+  .artist-quote { font-size: 24px; }
+
+  .portfolio-preview .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .portfolio-preview .section-title {
+    font-size: 32px;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .portfolio-preview .btn-sm {
+    display: inline-flex !important;
+    width: auto !important;
+    padding: 10px 25px !important;
+    font-size: 11px;
+  }
+
+  .portfolio-asymmetric-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    gap: 15px;
+  }
+
+  .portfolio-item.large {
+    grid-row: auto;
+    height: 100%;
+  }
+
+  .portfolio-item {
+    height: 100%;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .booking-cta .cta-main {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+  .booking-cta .cta-content {
+    max-width: 65% !important;
+  }
+  .booking-cta .cta-content h2 {
+    font-size: 36px !important;
+  }
+  .booking-cta .cta-trust-bar {
+    flex-direction: row !important;
+    gap: 20px !important;
+  }
+}

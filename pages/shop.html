@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Pierza Studio - Curated Jewelry & Tattoo Design</title>
+    <meta name="description" content="Explore the Pierza Archive. Precision-crafted piercing jewelry and concept-driven tattoo designs, curated for anatomical expression.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css?v=1.1">
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body class="shop-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">HOME V1</a>
+                <a href="../index-v2.html" class="nav-link">HOME V2</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="shop.html" class="nav-link active">SHOP</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero Section - Dynamic Diagonal Split -->
+        <section class="shop-hero">
+            <div class="hero-diagonal-split">
+                <!-- Jewelry Side -->
+                <div class="hero-diag-panel jewelry-path">
+                    <div class="diag-bg">
+                        <img src="../assets/images/shop/Precision jewelry.jpg" alt="Jewelry Archive">
+                        <div class="diag-overlay"></div>
+                    </div>
+                    <div class="diag-content">
+                        <div class="section-tag">
+                            <i data-lucide="gem"></i>
+                            <span>PATH_01</span>
+                        </div>
+                        <h1>Precision <br>Jewelry</h1>
+                        <p>Fine-grade materials curated for anatomical health.</p>
+                        <a href="#jewelry" class="btn btn-primary">Enter Archive</a>
+                    </div>
+                </div>
+
+                <!-- Tattoo Side -->
+                <div class="hero-diag-panel tattoo-path">
+                    <div class="diag-bg">
+                        <img src="../assets/images/shop/Concept tattoo.jpg" alt="Tattoo Atelier">
+                        <div class="diag-overlay"></div>
+                    </div>
+                    <div class="diag-content">
+                        <div class="section-tag">
+                            <i data-lucide="pen-tool"></i>
+                            <span>PATH_02</span>
+                        </div>
+                        <h1>Concept <br>Tattoo</h1>
+                        <p>Unique artistic blueprints designed for permanence.</p>
+                        <a href="#tattoos" class="btn btn-outline">Enter Atelier</a>
+                    </div>
+                </div>
+
+                <!-- Central Separator Label -->
+                <div class="diag-separator">
+                    <div class="sep-line"></div>
+                    <div class="sep-label">SELECT_PATH</div>
+                    <div class="sep-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Dual Navigation -->
+        <section class="shop-section bg-deep">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="route"></i>
+                        <span>ARCHIVE ROUTING</span>
+                    </div>
+                    <h2>Dual Navigation</h2>
+                    <p>Select your archival journey. Explore our curated jewelry collections or enter the tattoo design atelier.</p>
+                </div>
+                <div class="dual-nav-grid">
+                    <a href="#jewelry" class="path-card reveal">
+                        <span class="path-id">PATH_01 // JEWELRY</span>
+                        <div class="path-content">
+                            <h3>Piercing Jewelry</h3>
+                            <p>Fine materials. Precision-crafted forms.</p>
+                        </div>
+                        <i data-lucide="arrow-right" class="path-arrow"></i>
+                        <div class="path-bg-icon"><i data-lucide="gem"></i></div>
+                        <!-- Architectural Corners -->
+                        <div class="corner-tr"></div>
+                        <div class="corner-bl"></div>
+                    </a>
+                    <a href="#tattoos" class="path-card reveal delay-1">
+                        <span class="path-id">PATH_02 // TATTOO</span>
+                        <div class="path-content">
+                            <h3>Tattoo Designs</h3>
+                            <p>Concept-driven art designed for permanence.</p>
+                        </div>
+                        <i data-lucide="arrow-right" class="path-arrow"></i>
+                        <div class="path-bg-icon"><i data-lucide="pen-tool"></i></div>
+                        <!-- Architectural Corners -->
+                        <div class="corner-tr"></div>
+                        <div class="corner-bl"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Featured Collections -->
+        <section class="shop-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="layers"></i>
+                        <span>CURATED SETS</span>
+                    </div>
+                    <h2>Featured Collections</h2>
+                </div>
+                <div class="collections-scroller reveal">
+                    <div class="collection-card">
+                        <div class="ph-visual card-ph">
+                            <img src="../assets/images/shop/Aurum Series.jpg" alt="Aurum Series">
+                        </div>
+                        <div class="card-info">
+                            <h4>Aurum Series</h4>
+                            <p>Hand-finished 18K Solid Gold.</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="ph-visual card-ph">
+                            <img src="../assets/images/shop/Titanium Core.jpg" alt="Titanium Core">
+                        </div>
+                        <div class="card-info">
+                            <h4>Titanium Core</h4>
+                            <p>Medical-grade strength.</p>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="ph-visual card-ph">
+                            <img src="../assets/images/shop/Minimal Line.jpg" alt="Minimal Line">
+                        </div>
+                        <div class="card-info">
+                            <h4>Minimal Line</h4>
+                            <p>Fine-line tattoo concepts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Studio Picks -->
+        <section class="shop-section bg-soft">
+            <div class="container">
+                <div class="picks-layout reveal">
+                    <div class="picks-curation-info">
+                        <div class="section-tag">
+                            <i data-lucide="award"></i>
+                            <span>STUDIO PICKS</span>
+                        </div>
+                        <h2>Artist <br><em>Recommended</em></h2>
+                        <p>Selected by our artists based on form, balance, and the unique anatomical map of the wearer.</p>
+                        
+                        <div class="selection-criteria">
+                            <div class="criteria-item"><span>FORM</span><div class="dot"></div></div>
+                            <div class="criteria-item"><span>SYMMETRY</span><div class="dot"></div></div>
+                            <div class="criteria-item"><span>BALANCE</span><div class="dot"></div></div>
+                        </div>
+
+                        <div class="artist-signature">
+                            <span class="sig-label">CURATED BY</span>
+                            <span class="sig-name">M. Pierza</span>
+                        </div>
+                    </div>
+
+                    <div class="picks-showcase">
+                        <!-- Pick 1 -->
+                        <div class="pick-item pick-primary">
+                            <div class="ph-visual pick-ph">
+                                <img src="../assets/images/shop/ARTIST_CHOICE.jpg" alt="Balanced Helix Stack">
+                                <div class="pick-badge-premium">ARTIST_CHOICE</div>
+                                <div class="pick-overlay">
+                                    <span class="spec-id">#ARCHIVE_77</span>
+                                    <p>Optimized for triple helix mapping.</p>
+                                </div>
+                            </div>
+                            <div class="pick-info">
+                                <span class="pick-category">Jewelry Set</span>
+                                <h4>Balanced Helix Stack</h4>
+                            </div>
+                        </div>
+
+                        <!-- Pick 2 -->
+                        <div class="pick-item pick-secondary">
+                            <div class="ph-visual pick-ph">
+                                <img src="../assets/images/shop/CONCEPT_PICK.jpg" alt="Geometric Spine Concept">
+                                <div class="pick-badge-premium">CONCEPT_PICK</div>
+                                <div class="pick-overlay">
+                                    <span class="spec-id">#CONCEPT_04</span>
+                                    <p>Ideal for vertical anatomical flow.</p>
+                                </div>
+                            </div>
+                            <div class="pick-info">
+                                <span class="pick-category">Tattoo Design</span>
+                                <h4>Geometric Spine Concept</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Piercing Jewelry Grid -->
+        <section id="jewelry" class="shop-section">
+            <div class="container">
+                <div class="shop-header">
+                    <div class="shop-title">
+                        <div class="section-tag">
+                            <i data-lucide="gem"></i>
+                            <span>JEWELRY ARCHIVE</span>
+                        </div>
+                        <h2>Shop Collection</h2>
+                    </div>
+                    
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card reveal">
+                        <div class="ph-visual product-ph">
+                            <img src="../assets/images/shop/Gold Orbital Ring.jpg" alt="Gold Orbital Ring">
+                            <div class="product-badge">LIMITED_ARCHIVE</div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i data-lucide="eye"></i></button>
+                                <button class="action-btn" title="Enquire"><i data-lucide="message-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-id-row">
+                                <span class="product-id">SPEC_01 // 18K</span>
+                                <span class="product-cert">ISO Certified</span>
+                            </div>
+                            <h4>Gold Orbital Ring</h4>
+                            <div class="product-specs">
+                                <span>16G</span>
+                                <span class="dot"></span>
+                                <span>8mm DIA</span>
+                                <span class="dot"></span>
+                                <span>SOLID GOLD</span>
+                            </div>
+                            <span class="price">$120.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card reveal delay-1">
+                        <div class="ph-visual product-ph">
+                            <img src="../assets/images/shop/Industrial Barbell.jpg" alt="Industrial Barbell">
+                            <div class="product-actions">
+                                <button class="action-btn"><i data-lucide="eye"></i></button>
+                                <button class="action-btn" title="Enquire"><i data-lucide="message-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-id-row">
+                                <span class="product-id">SPEC_02 // TITAN</span>
+                                <span class="product-cert">ASTM F-136</span>
+                            </div>
+                            <h4>Industrial Barbell</h4>
+                            <div class="product-specs">
+                                <span>14G</span>
+                                <span class="dot"></span>
+                                <span>38mm L</span>
+                                <span class="dot"></span>
+                                <span>TITANIUM</span>
+                            </div>
+                            <span class="price">$85.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card reveal delay-2">
+                        <div class="ph-visual product-ph">
+                            <img src="../assets/images/shop/Celestial Stud.jpg" alt="Celestial Stud">
+                            <div class="product-badge">BEST_SELLER</div>
+                            <div class="product-actions">
+                                <button class="action-btn"><i data-lucide="eye"></i></button>
+                                <button class="action-btn" title="Enquire"><i data-lucide="message-square"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-id-row">
+                                <span class="product-id">SPEC_03 // GOLD</span>
+                                <span class="product-cert">ISO Certified</span>
+                            </div>
+                            <h4>Celestial Stud</h4>
+                            <div class="product-specs">
+                                <span>18G</span>
+                                <span class="dot"></span>
+                                <span>2.5mm</span>
+                                <span class="dot"></span>
+                                <span>SOLID GOLD</span>
+                            </div>
+                            <span class="price">$150.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Tattoo Design Gallery -->
+        <section id="tattoos" class="shop-section bg-deep">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="pen-tool"></i>
+                        <span>FLASH SPECIMENS</span>
+                    </div>
+                    <h2>Tattoo Gallery</h2>
+                    <p>Archived concepts designed for anatomical harmony and permanence.</p>
+                </div>
+                <div class="tattoo-grid">
+                    <!-- Tattoo Specimen 1 -->
+                    <div class="tattoo-item reveal">
+                        <div class="ph-visual tattoo-ph">
+                            <img src="../assets/images/shop/Linear Symmetry.jpg" alt="Linear Symmetry">
+                            <div class="design-insight">A study in linear symmetry and anatomical flow. Optimized for the spinal column or forearm.</div>
+                        </div>
+                        <div class="tattoo-info">
+                            <div class="tattoo-meta">
+                                <span class="style-tag">Fine Line</span>
+                                <span class="site-recom">RECOM_SITE: SPINE</span>
+                            </div>
+                            <h4>Linear Symmetry</h4>
+                            <div class="tattoo-actions">
+                                <button class="btn btn-sm btn-primary">Book This Design</button>
+                                <button class="btn btn-sm btn-outline"><i data-lucide="info"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tattoo Specimen 2 -->
+                    <div class="tattoo-item reveal delay-1">
+                        <div class="ph-visual tattoo-ph">
+                            <img src="../assets/images/shop/Anatomical Flow.jpg" alt="Anatomical Flow">
+                            <div class="design-insight">Geometric abstraction merging biological curves with industrial precision. Ideal for the outer ear or neck.</div>
+                        </div>
+                        <div class="tattoo-info">
+                            <div class="tattoo-meta">
+                                <span class="style-tag">Geometric</span>
+                                <span class="site-recom">RECOM_SITE: EAR_MAP</span>
+                            </div>
+                            <h4>Anatomical Flow</h4>
+                            <div class="tattoo-actions">
+                                <button class="btn btn-sm btn-primary">Book This Design</button>
+                                <button class="btn btn-sm btn-outline"><i data-lucide="info"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="shield-check"></i>
+                        <span>TECHNICAL INTEGRITY</span>
+                    </div>
+                    <h2>Material & Craft</h2>
+                    <p>Uncompromising quality standards across jewelry engineering and tattoo execution.</p>
+                </div>
+                <div class="craft-layout">
+                    <!-- Jewelry Panel -->
+                    <div class="craft-panel reveal">
+                        <div class="ph-visual craft-ph">
+                            <img src="../assets/images/shop/Biological Harmony.jpg" alt="Biological Harmony">
+                            <div class="craft-bg-icon"><i data-lucide="gem"></i></div>
+                        </div>
+                        <div class="craft-content">
+                            <div class="section-tag">
+                                <i data-lucide="gem"></i>
+                                <span>JEWELRY STANDARDS</span>
+                            </div>
+                            <h3>Biological Harmony</h3>
+                            <p>Implant-grade titanium, solid gold, and precision hand-finishing ensure long-term anatomical health.</p>
+                            
+                            <div class="craft-specs">
+                                <div class="spec-line"><span>Material Grade</span> <span>ASTM F-136</span></div>
+                                <div class="spec-line"><span>Certification</span> <span>ISO-10993</span></div>
+                                <div class="spec-line"><span>Finish</span> <span>Hand-Polished</span></div>
+                            </div>
+                        </div>
+                        <!-- Architectural Corners -->
+                        <div class="corner-tr"></div>
+                        <div class="corner-bl"></div>
+                    </div>
+
+                    <!-- Tattoo Panel -->
+                    <div class="craft-panel reveal delay-1">
+                        <div class="ph-visual craft-ph">
+                            <img src="../assets/images/shop/Artistic Precision.jpg" alt="Artistic Precision">
+                            <div class="craft-bg-icon"><i data-lucide="pen-tool"></i></div>
+                        </div>
+                        <div class="craft-content">
+                            <div class="section-tag">
+                                <i data-lucide="pen-tool"></i>
+                                <span>TATTOO STANDARDS</span>
+                            </div>
+                            <h3>Artistic Precision</h3>
+                            <p>Sterile instrumentation, high-grade pigments, and detail-focused execution define every session.</p>
+
+                            <div class="craft-specs">
+                                <div class="spec-line"><span>Ink Type</span> <span>High-Pigment</span></div>
+                                <div class="spec-line"><span>Protocol</span> <span>Sterile-ISO</span></div>
+                                <div class="spec-line"><span>Execution</span> <span>Fine-Line</span></div>
+                            </div>
+                        </div>
+                        <!-- Architectural Corners -->
+                        <div class="corner-tr"></div>
+                        <div class="corner-bl"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Process & Experience -->
+        <section class="shop-section bg-soft overflow-hidden">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="zap"></i>
+                        <span>THE PIERZA WAY</span>
+                    </div>
+                    <h2>The Experience</h2>
+                </div>
+                
+                <div class="process-wave-layout reveal">
+                    <!-- Curved Path Background -->
+                    <div class="process-path-svg">
+                        <svg viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 150C200 150 400 50 600 150C800 250 1000 150 1200 150" stroke="url(#gold-gradient)" stroke-width="2" stroke-dasharray="10 10"/>
+                            <defs>
+                                <linearGradient id="gold-gradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#D4AF37" stop-opacity="0"/>
+                                    <stop offset="0.5" stop-color="#D4AF37"/>
+                                    <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="process-steps">
+                        <!-- Step 01 -->
+                        <div class="process-step step-up">
+                            <div class="step-watermark">01</div>
+                            <div class="step-content">
+                                <h4>Consultation</h4>
+                                <p>Defining form and placement based on your map.</p>
+                            </div>
+                            <div class="step-node-hex">
+                                <div class="hex-inner"><i data-lucide="message-square"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 02 -->
+                        <div class="process-step step-down">
+                            <div class="step-node-hex">
+                                <div class="hex-inner"><i data-lucide="layers"></i></div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Selection</h4>
+                                <p>Choosing the specimen or design concept.</p>
+                            </div>
+                            <div class="step-watermark">02</div>
+                        </div>
+
+                        <!-- Step 03 -->
+                        <div class="process-step step-up">
+                            <div class="step-watermark">03</div>
+                            <div class="step-content">
+                                <h4>Application</h4>
+                                <p>Precision execution by master artists.</p>
+                            </div>
+                            <div class="step-node-hex">
+                                <div class="hex-inner"><i data-lucide="crosshair"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 04 -->
+                        <div class="process-step step-down">
+                            <div class="step-node-hex">
+                                <div class="hex-inner"><i data-lucide="shield-check"></i></div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Aftercare</h4>
+                                <p>Managed healing and technical maintenance.</p>
+                            </div>
+                            <div class="step-watermark">04</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Final CTA -->
+        <section class="shop-section final-cta-section">
+            <div class="container reveal">
+                <div class="cta-eco-layout">
+                    <div class="cta-left">
+                        <div class="section-tag">
+                            <i data-lucide="sparkles"></i>
+                            <span>THE FINAL PROTOCOL</span>
+                        </div>
+                        <h2>Ready to begin <br>your <em>curation</em>?</h2>
+                        <div class="cta-actions">
+                            <a href="contact.html" class="btn-pill">Start Your Journey</a>
+                        </div>
+                    </div>
+                    <div class="cta-right">
+                        <div class="ecosystem-visual">
+                            <div class="eco-ring outer"></div>
+                            <div class="eco-ring inner"></div>
+                            
+                            <div class="eco-center">
+                                <span class="logo-mark">PS</span>
+                            </div>
+
+                            <div class="orbiting-node node-1">
+                                <div class="node-icon"><i data-lucide="gem"></i></div>
+                                <div class="node-label">Jewelry Archive <i data-lucide="arrow-right"></i></div>
+                            </div>
+                            <div class="orbiting-node node-2">
+                                <div class="node-icon"><i data-lucide="pen-tool"></i></div>
+                                <div class="node-label">Tattoo Atelier <i data-lucide="arrow-right"></i></div>
+                            </div>
+                            <div class="orbiting-node node-3">
+                                <div class="node-icon"><i data-lucide="activity"></i></div>
+                                <div class="node-label">Aftercare <i data-lucide="arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home V1</a>
+                <a href="../index-v2.html">Home V2</a>
+                <a href="shop.html">Shop</a>
+                <a href="404.html">404 Error</a>
+                <a href="coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

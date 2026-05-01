@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin Your Curation | Pierza Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css?v=1.1">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body class="contact-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">HOME V1</a>
+                <a href="../index-v2.html" class="nav-link">HOME V2</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="shop.html" class="nav-link">SHOP</a>
+                <a href="contact.html" class="nav-link active">CONTACT</a>
+                <a href="dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero Section - Technical Onboarding Hub -->
+        <section class="contact-hero">
+            <div class="container hero-triple-grid">
+                <!-- Left: Branding & Initiation -->
+                <div class="hero-col left-col reveal">
+                    <div class="section-tag">
+                        <i data-lucide="sparkles"></i>
+                        <span>ONBOARDING_INITIATE</span>
+                    </div>
+                    <h1>Begin Your <br><em>Curation</em></h1>
+                    <p class="hero-subtext">
+                        Every placement begins with intention. Designed for your anatomy, crafted for permanence.
+                    </p>
+                    
+                    <div class="onboarding-input-group">
+                        <input type="email" placeholder="Your Email" class="onboarding-input">
+                        <button class="btn btn-primary btn-sm"><i data-lucide="send"></i></button>
+                    </div>
+
+                    <div class="hero-onboarding-footer">
+                        <span>AUTHORIZED ACCESS ONLY</span>
+                    </div>
+                </div>
+
+                <!-- Center: Arched Specimen Portal -->
+                <div class="hero-col center-col reveal">
+                    <div class="hero-arch-window">
+                        <img src="../assets/images/contact/herosection image.jpg" alt="Atelier Specimen" class="hero-specimen-img">
+                        <div class="arch-overlay"></div>
+                    </div>
+
+                    <!-- Floating Archival Cards -->
+                    <div class="floating-card card-top reveal delay-1">
+                        <div class="card-icon"><i data-lucide="shield-check"></i></div>
+                        <div class="card-info">
+                            <span class="label">SAFETY_RATING</span>
+                            <span class="val">100% STERILE</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-mid reveal delay-2">
+                        <div class="card-icon"><i data-lucide="award"></i></div>
+                        <div class="card-info">
+                            <span class="label">ARTIST_CHOICE</span>
+                            <span class="val">GOLD_CERTIFIED</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Diagnostic Specs -->
+                <div class="hero-col right-col reveal-right">
+                    <div class="studio-stat-block">
+                        <div class="stat-icon"><i data-lucide="activity"></i></div>
+                        <h3>World Class Experts</h3>
+                    </div>
+
+                    <div class="technical-stats">
+                        <div class="stat-item">
+                            <span class="val">77k+</span>
+                            <p>Anatomical mappings completed with precision.</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="val">0%</span>
+                            <p>Tolerance for non-sterile instrumentation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="studio-badge-mini">
+                        <i data-lucide="shield"></i>
+                        <span>ARCHIVAL_GRADE_V2.04</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Studio Info -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="map-pin"></i>
+                        <span>STUDIO_LOCATOR</span>
+                    </div>
+                    <h2>Visit the Atelier</h2>
+                </div>
+
+                <div class="info-grid reveal">
+                    <!-- Location -->
+                    <div class="info-card">
+                        <i data-lucide="map-pin" class="info-icon"></i>
+                        <h3>The Studio</h3>
+                        <div class="info-details">
+                            <span>Pierza Studio</span>
+                            <span>123 Archival Lane, Design District</span>
+                            <span>London, UK // E1 6AN</span>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="info-card">
+                        <i data-lucide="clock" class="info-icon"></i>
+                        <h3>Timings</h3>
+                        <div class="info-details">
+                            <span>Mon – Sat: 11AM – 8PM</span>
+                            <span>Sun: Appointment Only</span>
+                            <span class="text-accent">Appointments Preferred</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="info-card">
+                        <i data-lucide="message-square" class="info-icon"></i>
+                        <h3>Connect</h3>
+                        <div class="info-details">
+                            <span>+44 20 7946 0123 (WhatsApp)</span>
+                            <span>atelier@pierza.studio</span>
+                            <span>@pierza.studio (Instagram)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Styled Map Placeholder -->
+                <div class="map-placeholder-frame reveal delay-1">
+                    <!-- Map visual will be placed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Atelier Mapping (Replaces How It Works) -->
+        <section class="atelier-mapping reveal">
+            <!-- Full Width Map Container -->
+            <div class="map-visual-container">
+                <div class="map-diagnostic-grid"></div>
+                <div class="map-placeholder">
+                    <img src="../assets/images/contact/Atelier Map.jpg" alt="Atelier Map" class="map-base-visual">
+                    <div class="map-id-label">ATELIER_01 // LONDON_CORE</div>
+                    <!-- Central Marker -->
+                    <div class="map-marker">
+                        <div class="marker-pulse"></div>
+                        <div class="marker-point"></div>
+                    </div>
+                </div>
+                
+                <!-- Technical Metadata Overlays -->
+                <div class="map-coords top-left">51.5074° N, 0.1278° W</div>
+                <div class="map-coords bottom-right">GRID_REF: 77.04.12</div>
+            </div>
+
+            <div class="container">
+                <div class="map-info-module">
+                    <div class="section-tag">
+                        <i data-lucide="crosshair"></i>
+                        <span>PRECISION_LOCATION</span>
+                    </div>
+                    <h3>Locate the <br>Atelier</h3>
+                    <p>Situated in the heart of the Design District. Every session begins here.</p>
+                    <div class="map-actions">
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-pill-outline btn-sm">Open Terminal <i data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contact Form -->
+        <section id="booking-form" class="contact-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <i data-lucide="file-text"></i>
+                        <span>SESSION_REQUEST</span>
+                    </div>
+                    <h2>Request a Session</h2>
+                </div>
+
+                <div class="booking-module reveal">
+                    <form action="#" class="contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Email / WhatsApp</label>
+                                <input type="text" id="contact" class="form-input" placeholder="example@studio.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Type</label>
+                                <select id="service" class="form-input">
+                                    <option value="tattoo">Concept Tattoo</option>
+                                    <option value="piercing">Precision Piercing</option>
+                                    <option value="consultation">Technical Consultation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Placement Area</label>
+                                <input type="text" id="area" class="form-input" placeholder="e.g., Left Helix, Spine, etc.">
+                            </div>
+                            <div class="form-group form-full">
+                                <label for="message">Message // Concept Details</label>
+                                <textarea id="message" class="form-input" placeholder="Describe your vision and any specific requirements..."></textarea>
+                            </div>
+                            <div class="form-group form-full">
+                                <label>Reference Imagery (Optional)</label>
+                                <div class="file-upload-wrapper">
+                                    <label class="file-upload-btn">
+                                        <i data-lucide="upload-cloud"></i>
+                                        <span>Click to upload or drag files</span>
+                                        <input type="file" style="display: none;">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-full">
+                                <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Client Assurance (FAQ Grid) - Redesigned 2-Column Layout -->
+        <section id="faq" class="contact-section bg-deep">
+            <div class="container">
+                <div class="section-header center" style="margin-bottom: 0;">
+                    <div class="section-tag">
+                        <i data-lucide="shield-check"></i>
+                        <span>CLIENT_ASSURANCE_SYSTEM</span>
+                    </div>
+                    <h2 class="squiggle-heading">Frequently asked <span>questions</span></h2>
+                    <p>Archival knowledge to help you understand our curation protocols.</p>
+                </div>
+
+                <div class="faq-grid reveal">
+                    <!-- Q1 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Is it safe?</h4>
+                                <div class="faq-answer">
+                                    <p>Absolute safety is our primary protocol. We follow sterile, single-use instrumentation and utilize only medical-grade materials (ASTM F-136 Titanium) for all initial placements.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Does it hurt?</h4>
+                                <div class="faq-answer">
+                                    <p>We prioritize minimal discomfort through expert technique and precise anatomical mapping. sensation varies, but our controlled methodology is designed for comfort.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Healing time?</h4>
+                                <div class="faq-answer">
+                                    <p>Varies by placement — typically 4–8 weeks for piercings, longer for tattoos. Detailed custom healing protocols are provided at every session.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Can I customize designs?</h4>
+                                <div class="faq-answer">
+                                    <p>Yes, every design is tailored to your unique anatomy. We specialize in bespoke curation that complements your natural biological form perfectly.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Do you offer consultations?</h4>
+                                <div class="faq-answer">
+                                    <p>Yes — highly recommended before complex anatomical work or custom concept tattoos. This ensures total alignment before we initiate the process.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="faq-card">
+                        <button class="faq-toggle-btn">
+                            <div class="faq-q-content">
+                                <h4>Can I book online?</h4>
+                                <div class="faq-answer">
+                                    <p>You can initiate your request via our onboarding form. Final session times are confirmed after anatomical verification by our expert curators.</p>
+                                </div>
+                            </div>
+                            <div class="toggle-icon-portal"><i data-lucide="plus"></i></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Final CTA - Redesigned Split Layout -->
+        <section class="contact-final-cta">
+            <div class="container cta-split-grid reveal">
+                <!-- Left: Request Card -->
+                <div class="cta-request-card">
+                    <form action="#" class="request-form-mini">
+                        <input type="text" placeholder="Your Name" class="mini-input">
+                        <input type="text" placeholder="Your Phone / WhatsApp" class="mini-input">
+                        <select class="mini-input">
+                            <option value="">Choose Service</option>
+                            <option value="tattoo">Concept Tattoo</option>
+                            <option value="piercing">Precision Piercing</option>
+                        </select>
+                        <button type="submit" class="submit-pill">
+                            <div class="submit-icon"><i data-lucide="play" fill="currentColor"></i></div>
+                            <span>SUBMIT REQUEST</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Editorial Hub -->
+                <div class="cta-editorial-hub">
+                    <div class="section-tag">
+                        <i data-lucide="message-square"></i>
+                        <span>CONNECT_PROTOCOL</span>
+                    </div>
+                    <h2>Get in Touch <br>With Us <em>Today</em></h2>
+                    <p>Ready to initiate your anatomical curation? Whether you need a technical consultation, a custom concept mapping, or regular archival maintenance, Pierza Studio is here to help.</p>
+                    
+                    <div class="contact-row-info">
+                        <div class="contact-item-pill">
+                            <div class="icon-circle"><i data-lucide="phone"></i></div>
+                            <span class="item-text">+44 20 7946 0123</span>
+                        </div>
+                        <div class="contact-item-pill">
+                            <div class="icon-circle"><i data-lucide="map-pin"></i></div>
+                            <span class="item-text">London Core</span>
+                        </div>
+                        <div class="contact-item-pill">
+                            <div class="icon-circle"><i data-lucide="mail"></i></div>
+                            <span class="item-text">atelier@pierza.studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home V1</a>
+                <a href="../index-v2.html">Home V2</a>
+                <a href="shop.html">Shop</a>
+                <a href="404.html">404 Error</a>
+                <a href="coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

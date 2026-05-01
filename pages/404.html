@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy Out of Alignment | 404 Error</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/utility-pages.css">
+</head>
+<body class="util-page">
+    <div class="mesh-gradient">
+        <div class="mesh-orb orb-1"></div>
+        <div class="mesh-orb orb-2"></div>
+    </div>
+
+    <header class="util-header">
+        <div class="header-top-row">
+            <a href="../index.html" class="back-home">
+                <i data-lucide="arrow-left"></i> <span>Home</span>
+            </a>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle" id="rtl-toggle">RTL</button>
+            </div>
+        </div>
+        <div class="header-logo-row">
+            <a href="../index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="util-main">
+        <div class="error-grid">
+            <div class="error-illustration">
+                <div class="plug-circle"></div>
+                <svg class="plug-svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Top Plug & Wire -->
+                    <path d="M50 50 Q150 50 150 150 L150 200" stroke="var(--color-accent)" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+                    <rect x="135" y="200" width="30" height="40" rx="4" fill="var(--color-accent)"/>
+                    <!-- Bottom Plug & Wire -->
+                    <path d="M350 450 Q250 450 250 350 L250 300" stroke="var(--color-accent)" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+                    <rect x="235" y="260" width="30" height="40" rx="4" fill="var(--color-accent)"/>
+                    <rect x="240" y="250" width="4" height="10" rx="2" fill="var(--color-accent)"/>
+                    <rect x="256" y="250" width="4" height="10" rx="2" fill="var(--color-accent)"/>
+                </svg>
+            </div>
+            
+            <div class="error-content">
+                <div class="error-code">404</div>
+                <h2>Page Not Found</h2>
+                <p>We're sorry, the page you requested could not be found. Please go back to the homepage and restart your curation journey.</p>
+                <a href="../index.html" class="btn btn-primary">Go Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Removed Footer -->
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

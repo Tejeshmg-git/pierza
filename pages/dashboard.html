@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Terminal | Pierza Studio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-layout">
+        <!-- Persistent Sidebar -->
+        <aside class="dash-sidebar">
+            <div class="dash-brand">
+                <a href="../index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <span class="admin-badge">CLIENT DASHBOARD</span>
+                <button class="dash-close-btn" id="dash-close-btn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <nav class="dash-nav">
+                <a href="#" class="dash-nav-link active" data-pane="overview">
+                    <i data-lucide="layout-grid"></i> Your Curation
+                </a>
+                <a href="#" class="dash-nav-link" data-pane="sessions">
+                    <i data-lucide="calendar"></i> Upcoming Sessions
+                </a>
+                <a href="#" class="dash-nav-link" data-pane="designs">
+                    <i data-lucide="pen-tool"></i> My Designs
+                </a>
+                <a href="#" class="dash-nav-link" data-pane="map">
+                    <i data-lucide="user"></i> Anatomy Map
+                </a>
+                <a href="#" class="dash-nav-link" data-pane="aftercare">
+                    <i data-lucide="heart-pulse"></i> Aftercare
+                </a>
+            </nav>
+
+            <div class="dash-sidebar-footer">
+                <a href="#" class="dash-nav-link" data-pane="settings">
+                    <i data-lucide="settings"></i> Settings
+                </a>
+
+                <!-- System Controls -->
+                <div class="dash-controls-grid">
+                    <label class="dash-control-item">
+                        <span>Theme</span>
+                        <span class="switch">
+                            <input type="checkbox" id="theme-toggle-check" checked>
+                            <span class="slider"></span>
+                        </span>
+                    </label>
+                    <label class="dash-control-item">
+                        <span>RTL View</span>
+                        <span class="switch">
+                            <input type="checkbox" id="rtl-toggle-check">
+                            <span class="slider"></span>
+                        </span>
+                    </label>
+                </div>
+
+                <a href="../index.html" class="dash-nav-link">
+                    <i data-lucide="home"></i> Back to Home
+                </a>
+                
+                <a href="login.html" class="dash-nav-link logout-link">
+                    <i data-lucide="log-out"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dash-main">
+            <header class="dash-header">
+                <button class="dash-menu-btn" id="dash-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                
+                <div class="header-tools">
+                    <div class="dash-search">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    
+                    <div class="header-actions">
+                        <button class="dash-header-btn">
+                            <i data-lucide="bell"></i>
+                        </button>
+
+                        <div class="user-profile-mini">
+                            <div class="user-info">
+                                <span class="name">Julian Stone</span>
+                                <span class="role">Gold Member</span>
+                            </div>
+                            <div class="user-avatar">
+                                <img src="../assets/images/about/Elias Pierza.jpg" alt="Profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 1. Overview Pane -->
+            <div id="overview-pane" class="pane active">
+                <div class="profile-card">
+                    <img src="../assets/images/about/Elias Pierza.jpg" alt="Julian" class="profile-img">
+                    <div class="profile-details">
+                        <h2>Julian Stone</h2>
+                        <span class="tagline">Your anatomy, precisely curated.</span>
+                    </div>
+                </div>
+
+                <div class="dash-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon-box"><i data-lucide="calendar"></i></div>
+                        <div class="stat-info">
+                            <span class="label">Total Sessions</span>
+                            <span class="value">07</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-box"><i data-lucide="heart-pulse"></i></div>
+                        <div class="stat-info">
+                            <span class="label">Active Healings</span>
+                            <span class="value">02</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-box"><i data-lucide="check-circle"></i></div>
+                        <div class="stat-info">
+                            <span class="label">Completed Designs</span>
+                            <span class="value">08</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-box"><i data-lucide="award"></i></div>
+                        <div class="stat-info">
+                            <span class="label">Archival Points</span>
+                            <span class="value">1,250</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Recent Activity Timeline -->
+                <div class="visual-card" style="margin-top: 30px;">
+                    <div class="card-header">
+                        <h3>Recent Activity</h3>
+                        <span class="eyebrow">Studio History</span>
+                    </div>
+                    <div class="activity-timeline" style="display: flex; flex-direction: column; gap: 20px; padding: 10px 0;">
+                        <div class="activity-item" style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div class="activity-dot" style="width: 12px; height: 12px; background: var(--color-accent); border-radius: 50%; margin-top: 5px; box-shadow: 0 0 10px var(--color-accent);"></div>
+                            <div class="activity-content">
+                                <p style="font-size: 14px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px;">Helix Downsize Completed</p>
+                                <p style="font-size: 12px; color: var(--color-text-secondary);">Your left ear helix maturation is progressing perfectly. Standard downsize performed by Maya Silver.</p>
+                                <span style="font-size: 10px; color: var(--color-accent); opacity: 0.8; text-transform: uppercase; letter-spacing: 1px;">2 Hours Ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item" style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div class="activity-dot" style="width: 12px; height: 12px; background: #333; border-radius: 50%; margin-top: 5px;"></div>
+                            <div class="activity-content">
+                                <p style="font-size: 14px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px;">New Design Draft Uploaded</p>
+                                <p style="font-size: 12px; color: var(--color-text-secondary);">Artist Leo Thorne has uploaded a new concept for your "Orbital Prime" project.</p>
+                                <span style="font-size: 10px; color: var(--color-text-secondary); opacity: 0.6; text-transform: uppercase; letter-spacing: 1px;">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="activity-item" style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div class="activity-dot" style="width: 12px; height: 12px; background: #333; border-radius: 50%; margin-top: 5px;"></div>
+                            <div class="activity-content">
+                                <p style="font-size: 14px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px;">Loyalty Points Earned</p>
+                                <p style="font-size: 12px; color: var(--color-text-secondary);">+500 points added to your account for "Aftercare Excellence" certification.</p>
+                                <span style="font-size: 10px; color: var(--color-text-secondary); opacity: 0.6; text-transform: uppercase; letter-spacing: 1px;">Oct 01, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW: Curation Insights Module -->
+                <div class="visual-card" style="margin-top: 30px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);">
+                    <div class="card-header">
+                        <h3>Curation Insights</h3>
+                        <span class="badge badge-info">PRO TIP</span>
+                    </div>
+                    <div style="display: flex; gap: 20px; align-items: center; padding: 10px 0;">
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 20px;">
+                            <i data-lucide="sparkles" class="text-accent" style="width: 32px; height: 32px;"></i>
+                        </div>
+                        <div>
+                            <p style="font-size: 14px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 5px;">Maturation Milestones</p>
+                            <p style="font-size: 13px; color: var(--color-text-secondary); line-height: 1.5;">Based on your recent Helix downsize, we recommend transitioning to 18k Rose Gold jewelry in 6 weeks to maintain archival health.</p>
+                        </div>
+                    </div>
+                    <button class="login-cta" style="width: 100%; margin-top: 15px;">VIEW RECOMMENDATIONS</button>
+                </div>
+            </div>
+
+            <!-- 2. Sessions Pane -->
+            <div id="sessions-pane" class="pane" style="display: none;">
+                <div class="visual-card">
+                    <div class="card-header">
+                        <h3>Next Appointment</h3>
+                        <span class="badge badge-info">IN 4 DAYS</span>
+                    </div>
+                    <div class="session-info-row">
+                        <div class="session-date-box">
+                            <span class="month">Oct</span>
+                            <span class="day">12</span>
+                            <span class="time">14:00</span>
+                        </div>
+                        <div class="session-main-content">
+                            <p class="session-title">Architectural Ear Piercing</p>
+                            <p class="session-meta">Placement: <strong>Helix / Tragus</strong> • Artist: <strong>Maya Silver</strong></p>
+                            <div class="session-actions">
+                                <button class="login-cta">VIEW DETAILS</button>
+                                <button class="action-btn">RESCHEDULE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual-card" style="margin-top: 30px;">
+                    <div class="card-header">
+                        <h3>Follow-up Session</h3>
+                        <span class="eyebrow">Routine Maintenance</span>
+                    </div>
+                    <div class="session-info-row">
+                        <div class="session-date-box">
+                            <span class="month">Nov</span>
+                            <span class="day">15</span>
+                            <span class="time">11:30</span>
+                        </div>
+                        <div class="session-main-content">
+                            <p class="session-title">Jewelry Downsize & Check-up</p>
+                            <p class="session-meta">Placement: <strong>Conch</strong> • Artist: <strong>Leo Thorne</strong></p>
+                            <div class="session-actions">
+                                <button class="login-cta">CONFIRM ATTENDANCE</button>
+                                <button class="action-btn">VIEW PREP GUIDE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Designs Pane -->
+            <div id="designs-pane" class="pane" style="display: none;">
+                <div class="dash-grid">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <h3>Celestial Arc</h3>
+                            <span class="badge badge-success">APPROVED</span>
+                        </div>
+                        <div style="height: 200px; background: #111; border-radius: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="../assets/images/portfolio/Celestial Arc.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                        </div>
+                        <button class="action-btn" style="width: 100%;">VIEW DESIGN</button>
+                    </div>
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <h3>Conch Prime</h3>
+                            <span class="badge badge-info">IN PROGRESS</span>
+                        </div>
+                        <div style="height: 200px; background: #111; border-radius: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="../assets/images/portfolio/Conch Prime.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                        </div>
+                        <button class="action-btn" style="width: 100%;">REQUEST REVISION</button>
+                    </div>
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <h3>Helix Duo</h3>
+                            <span class="badge badge-draft">DRAFT</span>
+                        </div>
+                        <div style="height: 200px; background: #111; border-radius: 15px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <img src="../assets/images/portfolio/Helix Duo.jpg" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                        </div>
+                        <button class="action-btn" style="width: 100%;">EDIT DESIGN</button>
+                    </div>
+                    <div class="visual-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed rgba(212, 175, 55, 0.2);">
+                        <i data-lucide="plus-circle" class="text-accent" style="width: 40px; height: 40px; margin-bottom: 15px;"></i>
+                        <button class="login-cta" style="padding: 10px 20px;">UPLOAD NEW IDEA</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Anatomy Map Pane -->
+            <div id="map-pane" class="pane" style="display: none;">
+                <div class="visual-row">
+                    <div class="visual-card">
+                        <div class="card-header">
+                            <h3>Your Placement Map</h3>
+                            <div style="display: flex; gap: 15px; font-size: 10px;">
+                                <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent);"></span> EXISTING</span>
+                                <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #4285f4;"></span> PLANNED</span>
+                                <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #ff9100;"></span> HEALING</span>
+                            </div>
+                        </div>
+                        <div class="anatomy-map-container">
+                            <img src="../assets/images/ear-map.png" class="anatomy-illustration" alt="Ear Anatomy Map">
+                            <div class="map-dot" style="top: 38%; left: 48%; background: #ff9100; box-shadow: 0 0 15px #ff9100;" data-label="Anti-Helix (Healing)"></div>
+                            <div class="map-dot" style="top: 22%; left: 60%; background: #4285f4; box-shadow: 0 0 15px #4285f4;" data-label="Helix Sequence (Planned)"></div>
+                            <div class="map-dot" style="top: 42%; left: 32%;" data-label="Outer Rim (Existing)"></div>
+                            <div class="map-dot" style="top: 80%; left: 42%;" data-label="Lobe Curation (Existing)"></div>
+                            <div class="map-dot" style="top: 52%; left: 58%; background: #4285f4; box-shadow: 0 0 15px #4285f4;" data-label="Conch Placement (Planned)"></div>
+                            <div class="map-dot" style="top: 58%; left: 38%; background: #ff9100; box-shadow: 0 0 15px #ff9100;" data-label="Tragus Integration (Healing)"></div>
+                        </div>
+                    </div>
+                    <div class="visual-card">
+                        <div class="card-header"><h3>Active Placements</h3></div>
+                        <div class="sync-list">
+                            <div class="sync-item">
+                                <div><strong>Anti-Helix Sequence</strong><span style="display: block; font-size: 11px; opacity: 0.6;">Started Oct 02</span></div>
+                                <span class="badge badge-warning">HEALING</span>
+                            </div>
+                            <div class="sync-item">
+                                <div><strong>Helix / Tragus</strong><span style="display: block; font-size: 11px; opacity: 0.6;">Next Appointment</span></div>
+                                <span class="badge badge-info">PLANNED</span>
+                            </div>
+                            <div class="sync-item">
+                                <div><strong>Conch Placement</strong><span style="display: block; font-size: 11px; opacity: 0.6;">Scheduled Nov 15</span></div>
+                                <span class="badge badge-info">PLANNED</span>
+                            </div>
+                            <div class="sync-item">
+                                <div><strong>Tragus Integration</strong><span style="display: block; font-size: 11px; opacity: 0.6;">Started Oct 28</span></div>
+                                <span class="badge badge-warning">HEALING</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Orders Pane -->
+            <div id="orders-pane" class="pane" style="display: none;">
+                <div class="visual-card">
+                    <div class="card-header">
+                        <h3>Purchase History</h3>
+                        <span class="eyebrow">Jewelry Collection</span>
+                    </div>
+                    <div class="dash-table-container">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Material</th>
+                                    <th>Price</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Industrial Bar (14g)</td>
+                                    <td>Titanium G23</td>
+                                    <td>$85.00</td>
+                                    <td><span class="badge badge-success">DELIVERED</span></td>
+                                </tr>
+                                <tr>
+                                    <td>18k Gold Seam Ring</td>
+                                    <td>Solid Gold</td>
+                                    <td>$120.00</td>
+                                    <td><span class="badge badge-info">SHIPPING</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="action-btn" style="margin-top: 20px;">VIEW ALL ORDERS</button>
+                </div>
+            </div>
+
+            <!-- 6. Aftercare Pane -->
+            <div id="aftercare-pane" class="pane" style="display: none;">
+                <div class="visual-row">
+                    <div class="visual-card">
+                        <div class="card-header"><h3>Spine Healing Progress</h3></div>
+                        <div style="margin-bottom: 25px;">
+                            <p style="font-size: 14px; margin-bottom: 10px;">Day 12 of 30 • <strong>Subacute Phase</strong></p>
+                            <div class="progress-track"><div class="progress-fill" style="width: 40%;"></div></div>
+                        </div>
+                        <div class="healing-timeline">
+                            <div class="healing-step completed">
+                                <strong>Immediate Care (Day 1-3)</strong>
+                                <p style="font-size: 12px; opacity: 0.6;">Keep clean and dry. Avoid pressure.</p>
+                            </div>
+                            <div class="healing-step completed">
+                                <strong>Regeneration (Day 4-21)</strong>
+                                <p style="font-size: 12px; opacity: 0.6;">Moisturize as instructed. Avoid swimming.</p>
+                            </div>
+                            <div class="healing-step">
+                                <strong>Maturation (Day 22-90)</strong>
+                                <p style="font-size: 12px; opacity: 0.6;">Tissue starts to stabilize. Avoid changing jewelry.</p>
+                            </div>
+                            <div class="healing-step">
+                                <strong>Full Integration (Day 90+)</strong>
+                                <p style="font-size: 12px; opacity: 0.6;">Piercing is seasoned. Safe for jewelry upgrades.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual-card">
+                        <div class="card-header"><h3>Instructions</h3></div>
+                        <div class="instruction-list">
+                            <div class="instruction-item success">
+                                <i data-lucide="check-circle" class="text-accent"></i>
+                                <span>Clean 2x Daily with saline</span>
+                            </div>
+                            <div class="instruction-item success">
+                                <i data-lucide="droplets" class="text-accent"></i>
+                                <span>Use only Sterile Saline spray</span>
+                            </div>
+                            <div class="instruction-item success">
+                                <i data-lucide="bed" class="text-accent"></i>
+                                <span>Travel Pillow for side-sleeping</span>
+                            </div>
+                            <div class="instruction-item danger">
+                                <i data-lucide="waves" style="color: #ff4d4d;"></i>
+                                <span>No Swimming (Pools/Lakes)</span>
+                            </div>
+                            <div class="instruction-item danger">
+                                <i data-lucide="refresh-cw" style="color: #ff4d4d;"></i>
+                                <span>Don't Rotate or Touch jewelry</span>
+                            </div>
+                            <div class="instruction-item alert">
+                                <i data-lucide="alert-triangle" class="text-accent"></i>
+                                <span>Monitor for unusual swelling</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 25px; padding: 15px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; border: 1px dashed var(--color-accent);">
+                            <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--color-accent); margin-bottom: 5px; font-weight: 800;">Studio Pro Tip</p>
+                            <p style="font-size: 12px; opacity: 0.8; line-height: 1.4;">LITHA (Leave It The Hell Alone) is the most effective healing method. Minimal intervention leads to the best results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Messages Pane -->
+            <div id="messages-pane" class="pane" style="display: none;">
+                <div class="visual-card">
+                    <div class="card-header">
+                        <h3>Chat with Maya Silver</h3>
+                        <span class="eyebrow">Direct Studio Access</span>
+                    </div>
+                    <div class="chat-window">
+                        <div class="message received">Hi Julian! I've uploaded the helix concepts to your Designs tab. Let me know what you think.</div>
+                        <div class="message sent">Just saw them! I love the geometry in the second one. Can we make the lines a bit thinner?</div>
+                        <div class="message received">Absolutely. I'll update it by tomorrow evening.</div>
+                    </div>
+                    <div class="chat-input-row">
+                        <input type="text" placeholder="Type your message...">
+                        <button class="login-cta" style="padding: 12px;"><i data-lucide="send"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Recommendations Pane -->
+            <div id="recommendations-pane" class="pane" style="display: none;">
+                <div class="dash-grid">
+                    <div class="visual-card">
+                        <div class="card-header"><h3>Placement Match</h3></div>
+                        <p style="font-size: 14px; margin-bottom: 15px;">Based on your current Anti-Helix curation, we suggest:</p>
+                        <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 20px;">Nape Integration Sequence</p>
+                        <button class="login-cta" style="width: 100%;">BOOK THIS</button>
+                    </div>
+                    <div class="visual-card">
+                        <div class="card-header"><h3>Jewelry Upgrade</h3></div>
+                        <p style="font-size: 14px; margin-bottom: 15px;">To match your upcoming Helix piercing:</p>
+                        <p style="font-weight: 700; color: var(--color-accent); margin-bottom: 20px;">Titanium Gold Anodized Hoop</p>
+                        <button class="action-btn" style="width: 100%;">ADD TO PLAN</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. Settings Pane -->
+            <div id="settings-pane" class="pane" style="display: none;">
+                <div class="dash-grid">
+                    <div class="visual-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Profile Information</h3>
+                        </div>
+                        <div class="profile-edit-row">
+                            <div class="user-avatar profile-large">
+                                <img src="../assets/images/about/Elias Pierza.jpg" alt="Julian">
+                            </div>
+                            <div class="profile-action-group">
+                                <button class="login-cta">CHANGE PHOTO</button>
+                                <button class="action-btn">REMOVE</button>
+                            </div>
+                        </div>
+                        <div class="profile-form-grid">
+                            <div class="form-field">
+                                <label>Full Name</label>
+                                <input type="text" value="Julian Stone">
+                            </div>
+                            <div class="form-field">
+                                <label>Email Address</label>
+                                <input type="email" value="julian.stone@example.com">
+                            </div>
+                        </div>
+                        <button class="login-cta update-btn">UPDATE PROFILE</button>
+                    </div>
+
+                    <div class="visual-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Security & Privacy</h3>
+                        </div>
+                        <div class="instruction-list">
+                            <div class="instruction-item success">
+                                <i data-lucide="lock" class="text-accent"></i>
+                                <div>
+                                    <strong style="display: block;">Password Management</strong>
+                                    <span style="font-size: 12px; opacity: 0.6;">Last changed 3 months ago</span>
+                                </div>
+                                <button class="action-btn" style="margin-left: auto;">UPDATE</button>
+                            </div>
+                            <div class="instruction-item success">
+                                <i data-lucide="shield-check" class="text-accent"></i>
+                                <div>
+                                    <strong style="display: block;">Two-Factor Authentication</strong>
+                                    <span style="font-size: 12px; opacity: 0.6;">Currently enabled via SMS</span>
+                                </div>
+                                <button class="action-btn" style="margin-left: auto;">CONFIGURE</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Studio Preferences</h3>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <label style="display: block; font-size: 11px; text-transform: uppercase; margin-bottom: 8px; opacity: 0.6;">Measurement System</label>
+                                <select style="width: 100%; background: var(--color-bg-deep); border: 1px solid rgba(212, 175, 55, 0.15); padding: 12px; border-radius: 12px; color: var(--color-text-primary);">
+                                    <option>Metric (mm)</option>
+                                    <option>Imperial (inch)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 11px; text-transform: uppercase; margin-bottom: 8px; opacity: 0.6;">Primary Metal Type</label>
+                                <select style="width: 100%; background: var(--color-bg-deep); border: 1px solid rgba(212, 175, 55, 0.15); padding: 12px; border-radius: 12px; color: var(--color-text-primary);">
+                                    <option>Titanium G23</option>
+                                    <option>14k Solid Gold</option>
+                                    <option>18k Solid Gold</option>
+                                    <option>Niobium</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dash-controls-grid" style="background: none; padding: 0; margin-top: 25px;">
+                            <div class="dash-control-item">
+                                <span style="color: var(--color-text-primary);">High Contrast Mode</span>
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                            </div>
+                            <div class="dash-control-item" style="margin-top: 15px;">
+                                <span style="color: var(--color-text-primary);">Anatomy Map Labels</span>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual-card" style="grid-column: span 2;">
+                        <div class="card-header">
+                            <h3>Pierza Rewards</h3>
+                        </div>
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="font-size: 32px; font-weight: 800; color: var(--color-accent); margin-bottom: 5px;">2,450</div>
+                            <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; margin-bottom: 20px;">Available Points</div>
+                            <div class="progress-track"><div class="progress-fill" style="width: 65%;"></div></div>
+                            <p style="font-size: 12px; margin-top: 15px; opacity: 0.6;">You are 550 points away from a <strong>Silver Tier</strong> upgrade.</p>
+                        </div>
+                        <button class="login-cta" style="width: 100%; margin-top: 10px;">REDEEM POINTS</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.dash-nav-link[data-pane]');
+        const panes = document.querySelectorAll('.pane');
+        const paneTitle = document.getElementById('pane-title');
+
+        function switchPane(paneId, title) {
+            panes.forEach(p => p.style.display = 'none');
+            const activePane = document.getElementById(`${paneId}-pane`);
+            if (activePane) activePane.style.display = 'block';
+            paneTitle.innerText = title;
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPane = link.getAttribute('data-pane');
+                const title = link.innerText.trim();
+                
+                // Direct Highlight Toggle
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                switchPane(targetPane, title);
+            });
+        });
+
+        lucide.createIcons();
+
+        // Mobile/Tablet Menu Toggle
+        const menuBtn = document.getElementById('dash-menu-btn');
+        const closeBtn = document.getElementById('dash-close-btn');
+        const sidebar = document.querySelector('.dash-sidebar');
+
+        if (menuBtn && sidebar) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('active');
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                });
+            }
+
+            document.addEventListener('click', (e) => {
+                if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && e.target !== menuBtn) {
+                    sidebar.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.dash-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 1023) {
+                        sidebar.classList.remove('active');
+                    }
+                });
+            });
+        }
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>

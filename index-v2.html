@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home V2 | Pierza Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css?v=1.1">
+    <link rel="stylesheet" href="css/home-v2.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME V1</a>
+                <a href="index-v2.html" class="nav-link active">HOME V2</a>
+                <a href="pages/about.html" class="nav-link">ABOUT</a>
+                <a href="pages/portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="pages/shop.html" class="nav-link">SHOP</a>
+                <a href="pages/contact.html" class="nav-link">CONTACT</a>
+                <a href="pages/dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+                
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="pages/login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="pages/login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 01. Cinematic Hero (Split Layout) -->
+        <section class="hero-v2">
+            <div class="container hero-split-wrapper">
+                <div class="hero-left order-mobile-2">
+                    <span class="eyebrow text-accent reveal">An Atelier of Precision</span>
+                    <h1 class="reveal delay-1">Curate <span class="text-accent">Stories</span> That Define Your Aura</h1>
+                    <p class="hero-desc reveal delay-2">
+                        Hi, we are Pierza. With a decade of technical precision and artistic vision, 
+                        we are ready to transform your aesthetic into a curated legacy.
+                    </p>
+                    <div class="hero-actions-v2 reveal delay-3">
+                        <a href="pages/contact.html" class="btn btn-primary">Book Session</a>
+                        <a href="pages/portfolio.html" class="text-link">Previous Works <i data-lucide="arrow-up-right"></i></a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">1.2K+</span>
+                            <span class="stat-label">Piercings Done</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">98%</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">250+</span>
+                            <span class="stat-label">Gold Artworks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right order-mobile-1">
+                    <div class="hero-circle-frame">
+                        <div class="hero-main-img-wrapper">
+                            <img src="assets/images/home-v2/herosection-img.jpg" alt="Atelier Visual">
+                        </div>
+                        <!-- Orbiting Badges -->
+                        <div class="orbit-badge b1"><i data-lucide="shield-check"></i></div>
+                        <div class="orbit-badge b2"><i data-lucide="gem"></i></div>
+                        <div class="orbit-badge b3"><i data-lucide="sparkles"></i></div>
+                        <!-- Decorative Ring -->
+                        <div class="hero-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. Seasonal Lookbook -->
+        <section class="seasonal-lookbook">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Winter Curation '24</h2>
+                    <p>A limited collection of avant-garde placements and rare gold pieces.</p>
+                </div>
+                <div class="lookbook-staggered">
+                    <div class="curation-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/home-v2/The Helix Duo.jpg" alt="The Helix Duo">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Helix Duo</h3>
+                            <p>2 placements • 18k Gold</p>
+                            <a href="pages/shop.html" class="btn-card-pill">Explore Now <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="curation-card featured reveal delay-1">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/home-v2/Orbital Fusion.jpg" alt="Orbital Fusion">
+                        </div>
+                        <div class="card-content">
+                            <h3>Orbital Fusion</h3>
+                            <p>Advanced Curation • Titanium</p>
+                            <a href="pages/shop.html" class="btn-card-pill">Explore Now <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="curation-card reveal delay-2">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/home-v2/The Tragus Link.jpg" alt="The Tragus Link">
+                        </div>
+                        <div class="card-content">
+                            <h3>The Tragus Link</h3>
+                            <p>Minimalist • 14k White Gold</p>
+                            <a href="pages/shop.html" class="btn-card-pill">Explore Now <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="curation-card reveal delay-3">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/home-v2/Celestial Arc.jpg" alt="Celestial Arc">
+                        </div>
+                        <div class="card-content">
+                            <h3>Celestial Arc</h3>
+                            <p>5 placements • Diamond</p>
+                            <a href="pages/shop.html" class="btn-card-pill">Explore Now <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. Anatomy Interactive -->
+        <section class="anatomy-technical">
+            <div class="container">
+                <div class="anatomy-grid">
+                    <div class="anatomy-diagram-wrapper reveal-left">
+                        <div class="anatomy-diagram">
+                            <img src="assets/images/home-v2/Biological Precision.jpg" alt="Anatomy Mapping">
+                        </div>
+                    </div>
+                    <div class="anatomy-info reveal-right">
+                        <span class="eyebrow text-accent">Biological Precision</span>
+                        <h2 class="section-title">Anatomy-First Curation</h2>
+                        <p class="anatomy-desc">We analyze your unique biological structure to determine the perfect vector for each piece. Our mapping process ensures the jewelry complements your natural features with mathematical precision.</p>
+                        <div class="anatomy-actions">
+                            <a href="pages/portfolio.html" class="btn btn-pill-outline">View Mapping Results <i data-lucide="scan"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 04. Curation Tiers -->
+        <section class="curation-tiers">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow text-accent">Investment</span>
+                    <h2 class="section-title">Curation Tiers</h2>
+                    <p>Transparent pricing for transformative aesthetics.</p>
+                </div>
+
+                <!-- Toggle UI -->
+                <div class="pricing-toggle-wrapper">
+                    <div class="pricing-toggle">
+                        <span class="active">Single Session</span>
+                        <span>Full Journey <small>Save 15%</small></span>
+                    </div>
+                </div>
+
+                <div class="tiers-grid">
+                    <!-- Tier 1 -->
+                    <div class="tier-card reveal">
+                        <div class="tier-header">
+                            <span class="tier-name">Essential</span>
+                            <div class="tier-price">$120<span>/starting</span></div>
+                            <p class="tier-desc">Perfect for individuals starting their curation journey with a single placement.</p>
+                        </div>
+                        <a href="pages/contact.html" class="btn btn-tier">Begin Session</a>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check-circle-2"></i> Anatomy Mapping</li>
+                            <li><i data-lucide="check-circle-2"></i> Single Placement</li>
+                            <li><i data-lucide="check-circle-2"></i> Implant Grade Stud</li>
+                            <li><i data-lucide="check-circle-2"></i> Standard Aftercare</li>
+                        </ul>
+                    </div>
+ 
+                    <!-- Tier 2 (Featured) -->
+                    <div class="tier-card featured reveal delay-1">
+                        <div class="recommended-badge"><i data-lucide="zap"></i> Most Recommended</div>
+                        <div class="tier-header">
+                            <span class="tier-name">Signature</span>
+                            <div class="tier-price">$350<span>/starting</span></div>
+                            <p class="tier-desc">The ultimate atelier experience for those seeking a complete aesthetic transformation.</p>
+                        </div>
+                        <a href="pages/contact.html" class="btn btn-tier primary">The Full Journey</a>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check-circle-2"></i> Advanced Ear Mapping</li>
+                            <li><i data-lucide="check-circle-2"></i> Triple Placement</li>
+                            <li><i data-lucide="check-circle-2"></i> 18k Solid Gold Selection</li>
+                            <li><i data-lucide="check-circle-2"></i> Premium Healing Kit</li>
+                            <li><i data-lucide="check-circle-2"></i> Priority Booking</li>
+                        </ul>
+                    </div>
+ 
+                    <!-- Tier 3 -->
+                    <div class="tier-card reveal delay-2">
+                        <div class="tier-header">
+                            <span class="tier-name">Avant-Garde</span>
+                            <div class="tier-price">$800<span>/starting</span></div>
+                            <p class="tier-desc">For collectors and visionaries. Full studio takeover and custom jewelry design.</p>
+                        </div>
+                        <a href="pages/contact.html" class="btn btn-tier">Join the Elite</a>
+                        <ul class="tier-features">
+                            <li><i data-lucide="check-circle-2"></i> Full Studio Takeover</li>
+                            <li><i data-lucide="check-circle-2"></i> Unlimited Placements</li>
+                            <li><i data-lucide="check-circle-2"></i> Custom Jewelry Design</li>
+                            <li><i data-lucide="check-circle-2"></i> Concierge Aftercare</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. The Manifesto -->
+        <section class="manifesto">
+            <div class="manifesto-watermark">PIERZA</div>
+            <div class="container">
+                <div class="manifesto-grid">
+                    <div class="manifesto-left reveal-left order-mobile-2">
+                        <h2 class="manifesto-title">True <span class="text-accent">Beauty</span> is a force of precision.</h2>
+                    </div>
+                    <div class="manifesto-right reveal-right order-mobile-1">
+                        <p class="manifesto-desc">
+                            Legendary curations are born from the perfect harmony of biological structure and fine artistry. 
+                            Pierza is a creative atelier that helps visionaries discover the most powerful expression of their natural canvas.
+                        </p>
+                        <a href="pages/about.html" class="manifesto-link">Learn our philosophy <i data-lucide="move-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. Process Path -->
+        <section class="process-path">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow text-accent">The Journey</span>
+                    <h2 class="section-title">How We Create</h2>
+                </div>
+                <div class="path-container">
+                    <div class="process-step reveal">
+                        <div class="step-marker"></div>
+                        <span class="step-number">01</span>
+                        <h3 class="step-title">Discovery</h3>
+                        <p class="step-desc">A deep dive into your personal style and anatomy to define the curation goal for your unique journey with precision and intention.</p>
+                    </div>
+                    <div class="process-step reveal delay-1">
+                        <div class="step-marker"></div>
+                        <span class="step-number">02</span>
+                        <h3 class="step-title">Mapping</h3>
+                        <p class="step-desc">Using precision vectors to identify the exact coordinates for mathematical beauty across your biological canvas.</p>
+                    </div>
+                    <div class="process-step reveal delay-2">
+                        <div class="step-marker"></div>
+                        <span class="step-number">03</span>
+                        <h3 class="step-title">Transformation</h3>
+                        <p class="step-desc">The technical execution of your curation using the world's finest medical tools and artisanal gold jewelry pieces.</p>
+                    </div>
+                    <div class="process-step reveal delay-3">
+                        <div class="step-marker"></div>
+                        <span class="step-number">04</span>
+                        <h3 class="step-title">Maturation</h3>
+                        <p class="step-desc">Our concierge healing support ensures your art becomes a permanent part of you through dedicated aftercare rituals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 07. Client Transformations -->
+        <section class="transformations">
+            <div class="container">
+                <div class="section-header center reveal">
+                    <span class="eyebrow text-accent">Gallery</span>
+                    <h2 class="section-title">Client Transformations</h2>
+                    <p>Real results from our precision mapping and curation atelier.</p>
+                </div>
+                <div class="transformation-grid">
+                    <div class="transformation-item reveal-left">
+                        <div class="compare-container">
+                            <div class="compare-box">
+                                <img src="assets/images/home-v2/Gallery-img-02.jpg" alt="Before Triple Helix">
+                            </div>
+                            <div class="compare-box">
+                                <img src="assets/images/home-v2/The Triple Helix Curation.jpg" alt="After Triple Helix">
+                            </div>
+                        </div>
+                        <h3>The Triple Helix Curation</h3>
+                        <p>Transition from a blank canvas to a balanced, avant-garde helix set.</p>
+                    </div>
+                    <div class="transformation-item reveal-right">
+                        <div class="compare-container">
+                            <div class="compare-box">
+                                <img src="assets/images/home-v2/Gallery-img-03.jpg" alt="Before Gold Conch">
+                            </div>
+                            <div class="compare-box">
+                                <img src="assets/images/home-v2/Gold Avant-Garde Conch.jpg" alt="After Gold Conch">
+                            </div>
+                        </div>
+                        <h3>Gold Avant-Garde Conch</h3>
+                        <p>Sophisticated 18k solid gold integration for a minimal, premium look.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08. Interactive FAQ -->
+        <section class="faq-v2">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow text-accent">FAQs</span>
+                    <h2 class="section-title">Frequently asked <span class="squiggle">questions</span></h2>
+                    <p>Here are some common questions about our services to help you understand better.</p>
+                </div>
+                <div class="faq-grid">
+                    <!-- Column 1 -->
+                    <div class="faq-column reveal-left">
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>How do you ensure medical-grade safety?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>We use hospital-grade sterilization, single-use surgical tools, and implant-grade titanium or solid 18k gold exclusively.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>What is the 'Anatomy Mapping' process?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>It is a technical consultation where we analyze your bone structure, cartilage depth, and blood flow to determine the safest and most aesthetic placement.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>Can I book online?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>Yes, our private booking portal allows you to select your preferred artist and session type with real-time availability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="faq-column reveal-right">
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>Do you offer walk-in appointments?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>To maintain our private atelier environment and hygiene standards, we operate strictly on a pre-booked appointment basis.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>What is your jewelry warranty?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>All solid gold and titanium pieces come with a lifetime guarantee against manufacturing defects, ensuring your investment is protected.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-header">
+                                <h3>How long is the healing process?</h3>
+                                <div class="faq-icon-circle"><i data-lucide="plus" class="faq-icon"></i></div>
+                            </div>
+                            <div class="faq-body">
+                                <p>Healing varies by placement, typically ranging from 3 to 12 months. Our concierge support guides you through every stage of the maturation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09. Editorial Journal -->
+        <section class="editorial-journal">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">The Journal</h2>
+                        <p>Exploring the intersection of biological precision and fine art.</p>
+                    </div>
+                    <a href="pages/coming-soon.html" class="gold-link desktop-only">View All Stories</a>
+                </div>
+                <div class="journal-grid">
+                    <div class="journal-card featured reveal">
+                        <img src="assets/images/home-v2/Behind the Design.jpg" alt="Behind the Design">
+                        <div class="journal-overlay">
+                            <span class="date">March 05, 2024</span>
+                            <h3>Behind the Design</h3>
+                            <p>An inside look at our mathematical approach to aesthetic transformation.</p>
+                        </div>
+                    </div>
+                    <div class="journal-side reveal-right delay-1">
+                        <div class="journal-card side">
+                            <img src="assets/images/home-v2/Aftercare Mastery.jpg" alt="Aftercare Mastery">
+                            <div class="journal-overlay">
+                                <span class="date">April 12, 2024</span>
+                                <h3>Aftercare Mastery</h3>
+                            </div>
+                        </div>
+                        <div class="journal-card side">
+                            <img src="assets/images/home-v2/The Art of Minimalist Gold.jpg" alt="Minimalist Gold">
+                            <div class="journal-overlay">
+                                <span class="date">May 24, 2024</span>
+                                <h3>The Art of Minimalist Gold</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer mobile-only">
+                    <a href="pages/coming-soon.html" class="gold-link">View All Stories</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    ...
+    <script>
+        // Simple FAQ Accordion Logic
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const body = item.querySelector('.faq-body');
+                const isOpen = body.style.maxHeight !== '0px' && body.style.maxHeight !== '';
+                
+                // Close others
+                document.querySelectorAll('.faq-body').forEach(b => b.style.maxHeight = '0px');
+                document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+                
+                if (!isOpen) {
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                    header.querySelector('.faq-icon').style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+    </script>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home V1</a>
+                <a href="index-v2.html">Home V2</a>
+                <a href="pages/shop.html">Shop</a>
+                <a href="pages/404.html">404 Error</a>
+                <a href="pages/coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="pages/about.html">About</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/portfolio.html">Portfolio</a>
+                <a href="pages/dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Pricing Toggle Logic
+        const toggleSpans = document.querySelectorAll('.pricing-toggle span');
+        const prices = {
+            monthly: ['$120', '$350', '$800'],
+            yearly: ['$99', '$299', '$699']
+        };
+        const priceElements = document.querySelectorAll('.tier-price');
+
+        toggleSpans.forEach((span, index) => {
+            span.addEventListener('click', () => {
+                // Toggle active class
+                toggleSpans.forEach(s => s.classList.remove('active'));
+                span.classList.add('active');
+
+                // Update prices (Simulated)
+                priceElements.forEach((priceEl, i) => {
+                    const basePrice = index === 0 ? prices.monthly[i] : prices.yearly[i];
+                    priceEl.innerHTML = `${basePrice}<span>/${index === 0 ? 'starting' : 'journey'}</span>`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

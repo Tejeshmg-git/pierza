@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Pierza Studio - Anatomical Curation Archive</title>
+    <meta name="description" content="Explore the Pierza Studio portfolio. A curated archive of anatomical design, refined jewelry, and intentional placement.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css?v=1.1">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="portfolio-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">HOME V1</a>
+                <a href="../index-v2.html" class="nav-link">HOME V2</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="portfolio.html" class="nav-link active">PORTFOLIO</a>
+                <a href="shop.html" class="nav-link">SHOP</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 0. Hero Section -->
+        <section class="portfolio-hero">
+            <div class="container">
+                <div class="hero-main-layout">
+                    <!-- Left: Content -->
+                    <div class="hero-left reveal">
+                        <span class="eyebrow" data-id="ARCHIVE_0.0">The Archive</span>
+                        <h1>The Archive <br>of <em>Precision</em> Design</h1>
+                        <p class="hero-subtext">Transforming anatomical mapping into stunning curated visuals—merging biological structure with geometric precision.</p>
+                        <a href="#curations" class="btn btn-primary btn-arrow">
+                            Explore Archive <i data-lucide="move-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Center: Visual -->
+                    <div class="hero-center reveal">
+                        <div class="hero-circular-visual">
+                            <img src="../assets/images/portfolio/Celestial Arc.jpg" alt="Master Curation" class="curator-img">
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="hero-right reveal">
+                        <div class="hero-stat">
+                            <span class="stat-num">15+</span>
+                            <span class="stat-label">Years of Mastery</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">280+</span>
+                            <span class="stat-label">Precision Curations</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">99.9%</span>
+                            <span class="stat-label">Anatomical Accuracy</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">Global Collaborations</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 1. Signature Curations -->
+        <section id="curations" class="portfolio-section bg-soft">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow" data-id="CURATION_S1">Highlights</span>
+                    <h2>Signature Curations</h2>
+                    <p>A selection of our most refined compositions — where anatomy meets artistry.</p>
+                </div>
+                <div class="signature-grid">
+                    <!-- Item 1 -->
+                    <div class="signature-card reveal">
+                        <div class="sig-visual">
+                            <div class="ph-visual"><img src="../assets/images/portfolio/Celestial Arc.jpg" alt="Celestial Arc" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                        <div class="sig-info">
+                            <div class="sig-badge">PRECISION_MAPPING // 01</div>
+                            <h3>Celestial Arc</h3>
+                            <p>Five-point diamond constellation aligned along natural curvature ear.</p>
+                            <div class="sig-footer">
+                                <span class="sig-meta">14K GOLD // DIAMOND</span>
+                                <span class="sig-spec">GA: 1.2mm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="signature-card reveal delay-1">
+                        <div class="sig-visual">
+                            <div class="ph-visual"><img src="../assets/images/portfolio/Helix Duo.jpg" alt="Helix Duo" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                        <div class="sig-info">
+                            <div class="sig-badge">SYMMETRY_ANALYSIS // 02</div>
+                            <h3>Helix Duo</h3>
+                            <p>Dual placement in 18k gold, balanced for symmetry and flow.</p>
+                            <div class="sig-footer">
+                                <span class="sig-meta">18K GOLD // MINIMAL</span>
+                                <span class="sig-spec">ISO_10993</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="signature-card reveal delay-2">
+                        <div class="sig-visual">
+                            <div class="ph-visual"><img src="../assets/images/portfolio/Conch Prime.jpg" alt="Conch Prime" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        </div>
+                        <div class="sig-info">
+                            <div class="sig-badge">ANCHOR_PLACEMENT // 03</div>
+                            <h3>Conch Prime</h3>
+                            <p>A bold central anchor in polished gold for structural depth.</p>
+                            <div class="sig-footer">
+                                <span class="sig-meta">SOLID GOLD // STATEMENT</span>
+                                <span class="sig-spec">24K_PLATE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Curation Categories (Filterable) -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="filter-controls center">
+                    <span class="eyebrow" data-id="STYLE_SELECT">Explore by Curation Style</span>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All</button>
+                        <button class="filter-tab" data-filter="minimal">Minimal</button>
+                        <button class="filter-tab" data-filter="statement">Statement</button>
+                        <button class="filter-tab" data-filter="titanium">Titanium</button>
+                    </div>
+                </div>
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Dynamically populated or static items with data-category -->
+                    <div class="portfolio-item reveal" data-category="minimal">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Minimal_01.jpg" alt="Minimal 01" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>MINIMAL_01</h4>
+                                <span class="item-spec">14K GOLD // ORBITAL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal" data-category="statement">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Statement_01.jpg" alt="Statement 01" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>STATEMENT_01</h4>
+                                <span class="item-spec">18K SOLID // ANCHOR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal" data-category="titanium">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Titanium_01.jpg" alt="Titanium 01" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>TITANIUM_01</h4>
+                                <span class="item-spec">GR-23 // INDUSTRIAL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal" data-category="minimal">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Minimal_02.jpg" alt="Minimal 02" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>MINIMAL_02</h4>
+                                <span class="item-spec">14K ROSE // LOBE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal" data-category="statement">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Statement_02.jpg" alt="Statement 02" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>STATEMENT_02</h4>
+                                <span class="item-spec">18K GOLD // HELIX_MAX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item reveal" data-category="titanium">
+                        <div class="ph-visual item-visual">
+                            <img src="../assets/images/portfolio/Titanium_02.jpg" alt="Titanium 02" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="item-overlay">
+                                <h4>TITANIUM_02</h4>
+                                <span class="item-spec">HIGH_POLISH // DAITH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Anatomy-First Design (Interactive Diagram) -->
+        <section class="portfolio-section bg-soft">
+            <div class="container">
+                <div class="anatomy-layout">
+                    <div class="anatomy-content reveal">
+                        <span class="eyebrow" data-id="DIAGNOSTIC_E1">The Science</span>
+                        <h2>Anatomy-First Design</h2>
+                        <p>Every placement is mapped to complement the ear’s natural structure — ensuring balance, comfort, and longevity.</p>
+                        <ul class="anatomy-points">
+                            <li><strong>Helix Point A:</strong> Optimized for orbital light capture.</li>
+                            <li><strong>Conch Prime:</strong> The structural anchor of the curation.</li>
+                            <li><strong>Tragus Link:</strong> A subtle bridge for horizontal flow.</li>
+                        </ul>
+                    </div>
+                    <div class="anatomy-visual-container reveal-right">
+                        <div class="anatomy-map">
+                            <div class="ph-visual anatomy-placeholder">
+                                <img src="../assets/images/portfolio/Anatomy-First Design.jpg" alt="Ear Anatomy Diagram" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="hotspot" style="top: 20%; left: 60%;" data-label="Helix Point A">
+                                    <div class="crosshair"></div>
+                                </div>
+                                <div class="hotspot" style="top: 50%; left: 45%;" data-label="Conch Prime">
+                                    <div class="crosshair"></div>
+                                </div>
+                                <div class="hotspot" style="top: 65%; left: 25%;" data-label="Tragus Link">
+                                    <div class="crosshair"></div>
+                                </div>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Transformation Stories -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow" data-id="TRANSFORM_V1">Real Impact</span>
+                    <h2>Transformation Stories</h2>
+                </div>
+                <div class="transformation-container reveal">
+                    <div class="transformation-card">
+                        <div class="transformation-visuals">
+                            <div class="before-box">
+                                <img src="../assets/images/portfolio/ORIGIN_ALPHA.jpg" alt="Origin Alpha" class="transformation-img before-img">
+                                <span class="ph-label">ORIGIN_ALPHA</span>
+                                <span class="spec-label">UNMAPPED_NODE</span>
+                            </div>
+                            <div class="splitter-bar">
+                                <div class="splitter-handle">
+                                    <i data-lucide="move-horizontal"></i>
+                                </div>
+                            </div>
+                            <div class="after-box">
+                                <img src="../assets/images/portfolio/CURATION_FINAL.jpg" alt="Curation Final" class="transformation-img after-img">
+                                <span class="ph-label">CURATION_FINAL</span>
+                                <span class="spec-label">ATELIER_CERTIFIED</span>
+                            </div>
+                        </div>
+                        <div class="transformation-info">
+                            <h3>Triple Helix Curation</h3>
+                            <p>A progression from single placement to layered elegance, utilizing 14K white gold arc segments.</p>
+                            <div class="transformation-meta">PHASE_03 // SEQUENCE_COMPLETE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Detail Shots (Macro Luxury) -->
+        <section class="portfolio-section bg-soft">
+            <div class="container">
+                <div class="macro-grid">
+                    <div class="macro-content">
+                        <span class="eyebrow" data-id="MACRO_M1">Macro View</span>
+                        <h2>Material & Detail</h2>
+                        <p>Our commitment to excellence begins at the molecular level. Every piece is a synthesis of biological compatibility and industrial precision.</p>
+                        
+                        <div class="material-specs">
+                            <div class="m-spec-item">
+                                <span class="spec-code">MT_SPEC // 01</span>
+                                <h4>Implant-Grade Base</h4>
+                                <p>ASTM F-136 Titanium & 14K/18K Solid Gold certifications.</p>
+                            </div>
+                            <div class="m-spec-item">
+                                <span class="spec-code">MT_SPEC // 02</span>
+                                <h4>Optical Precision</h4>
+                                <p>Precision set stones with near-zero tolerance for light diffraction.</p>
+                            </div>
+                            <div class="m-spec-item">
+                                <span class="spec-code">MT_SPEC // 03</span>
+                                <h4>Anatomical Finish</h4>
+                                <p>High-polish surfaces designed for long-term biological harmony.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="macro-scroller">
+                        <div class="macro-item"><div class="ph-visual"><img src="../assets/images/portfolio/Texture_CloseUp.jpg" alt="Texture CloseUp" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                        <div class="macro-item"><div class="ph-visual"><img src="../assets/images/portfolio/Finish_CloseUp.jpg" alt="Finish CloseUp" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                        <div class="macro-item"><div class="ph-visual"><img src="../assets/images/portfolio/Stone_Set_Detail.jpg" alt="Stone Set Detail" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Style Explorations -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="eyebrow" data-id="CREATIVE_R1">Creative Range</span>
+                    <h2>Style Explorations</h2>
+                </div>
+                <div class="styles-grid">
+                    <div class="style-card reveal">
+                        <div class="style-icon"><i data-lucide="circle"></i></div>
+                        <h3>Minimal Gold</h3>
+                        <p>Understated elegance with refined placements and 18K accents.</p>
+                    </div>
+                    <div class="style-card reveal delay-1">
+                        <div class="style-icon"><i data-lucide="hash"></i></div>
+                        <h3>Titanium</h3>
+                        <p>Industrial precision with modern, high-contrast aesthetic, refined detailing.</p>
+                    </div>
+                    <div class="style-card reveal delay-2">
+                        <div class="style-icon"><i data-lucide="sparkles"></i></div>
+                        <h3>Diamond Luxe</h3>
+                        <p>Elevated compositions with multi-point light-reflecting brilliance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Behind the Curation -->
+        <section class="portfolio-section bg-deep">
+            <div class="container">
+                <div class="process-layout">
+                    <div class="process-header reveal">
+                        <span class="eyebrow" data-id="METHOD_P1">Methodology</span>
+                        <h2>Behind the Curation</h2>
+                        <p>Every piece begins with mapping, measurement, and material selection — ensuring precision at every stage.</p>
+                    </div>
+                    <div class="process-steps-grid">
+                        <div class="p-step"><span>01</span><h4>Consultation</h4></div>
+                        <div class="p-step"><span>02</span><h4>Mapping</h4></div>
+                        <div class="p-step"><span>03</span><h4>Placement</h4></div>
+                        <div class="p-step"><span>04</span><h4>Final Composition</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Client Highlights -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="testimonial-slider reveal">
+                    <div class="testimonial-item">
+                        <i data-lucide="quote" class="quote-icon"></i>
+                        <blockquote>The level of detail and care was unmatched. It felt like a design experience, not just a service. Every placement feels intentional.</blockquote>
+                        <cite>— Aditi R. <span class="client-id">// CLIENT_0842</span></cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Final CTA -->
+        <section class="final-cta portfolio-section">
+            <div class="container reveal">
+                <div class="cta-card">
+                    <div class="cta-content">
+                        <span class="eyebrow" data-id="JOURNEY_Z1">Start Your Journey</span>
+                        <h2>Begin Your Curation</h2>
+                        <p>Experience precision-driven design tailored to your unique anatomy. Our master curators are ready to map your next progression.</p>
+                        <div class="cta-actions">
+                            <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+                            <a href="shop.html" class="btn btn-outline">View Archive</a>
+                        </div>
+                    </div>
+                    <div class="cta-technical">
+                        <div class="cta-trust-points">
+                            <div class="trust-item">
+                                <i data-lucide="shield-check"></i>
+                                <span>ISO-10993 Certified Materials</span>
+                            </div>
+                            <div class="trust-item">
+                                <i data-lucide="layers"></i>
+                                <span>Anatomical Precision Mapping</span>
+                            </div>
+                            <div class="trust-item">
+                                <i data-lucide="award"></i>
+                                <span>Master Piercer Supervision</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Architectural Corners -->
+                    <div class="corner-tr"></div>
+                    <div class="corner-bl"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home V1</a>
+                <a href="../index-v2.html">Home V2</a>
+                <a href="shop.html">Shop</a>
+                <a href="404.html">404 Error</a>
+                <a href="coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Simple Filter Logic
+        const tabs = document.querySelectorAll('.filter-tab');
+        const items = document.querySelectorAll('.portfolio-item');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const filter = tab.dataset.filter;
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

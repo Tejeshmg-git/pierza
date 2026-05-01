@@ -1,0 +1,1525 @@
+/* Shop Page Styles - Curated Laboratory Aesthetic */
+
+.shop-page {
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-primary);
+}
+
+.shop-section {
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+}
+
+/* 1. Hero Section - Dynamic Diagonal Split */
+.shop-hero {
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-diagonal-split {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-diag-panel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* Jewelry Panel (Left) */
+.jewelry-path {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    z-index: 2;
+    justify-content: flex-start;
+}
+
+/* Tattoo Panel (Right) */
+.tattoo-path {
+    right: 0;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+    justify-content: flex-end;
+}
+
+.hero-diag-panel:hover {
+    width: 70%;
+    z-index: 5;
+}
+
+.jewelry-path:hover {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.tattoo-path:hover {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.diag-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.diag-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.1);
+    transition: transform 1.2s ease;
+}
+
+.hero-diag-panel:hover .diag-bg img {
+    transform: scale(1.05);
+    filter: brightness(0.5) contrast(1.1);
+}
+
+.diag-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(11, 11, 11, 0.2), rgba(11, 11, 11, 0.6));
+}
+
+.diag-content {
+    position: relative;
+    z-index: 10;
+    max-width: 450px;
+}
+
+.jewelry-path .diag-content { text-align: left; margin-left: 5%; }
+.tattoo-path .diag-content { text-align: right; margin-right: 5%; }
+
+.diag-content h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin: var(--spacing-md) 0;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+}
+
+.diag-content p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7) !important;
+    margin-bottom: var(--spacing-xl);
+    max-width: 320px;
+}
+
+.tattoo-path .diag-content p { margin-left: auto; }
+
+/* Separator Label */
+.diag-separator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.sep-line {
+    width: 60px;
+    height: 1px;
+    background: var(--color-accent);
+}
+
+.sep-label {
+    font-family: var(--font-technical);
+    font-size: 10px;
+    color: var(--color-accent);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+/* Section Tags - Highlighted Pill Style */
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: var(--spacing-md);
+    transition: all 0.3s ease;
+}
+
+.section-tag:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: var(--color-accent);
+}
+
+.section-tag i {
+    width: 14px;
+    height: 14px;
+    color: var(--color-accent);
+}
+
+.hero-diag-panel .section-tag i,
+.hero-diag-panel .section-tag svg,
+.hero-diag-panel .section-tag [data-lucide] {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+.section-tag span {
+    font-family: var(--font-technical);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.hero-diag-panel .section-tag span {
+    color: #FFFFFF !important;
+}
+
+/* 2. Dual Navigation - High Fidelity Paths */
+.dual-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.path-card {
+    background: var(--color-bg-soft);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    padding: var(--spacing-xxl);
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.path-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.path-id {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    opacity: 0.6;
+    z-index: 5;
+}
+
+.path-content {
+    position: relative;
+    z-index: 10;
+}
+
+.path-content h3 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+}
+
+.path-content p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.path-arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent);
+    opacity: 0.3;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.path-card:hover .path-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Background Icon */
+.path-bg-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    opacity: 0.02;
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.path-bg-icon i {
+    width: 180px;
+    height: 180px;
+    color: var(--color-accent);
+}
+
+.path-card:hover .path-bg-icon {
+    opacity: 0.06;
+    transform: scale(1.1) rotate(-10deg);
+}
+
+/* 3. Featured Collections */
+.collections-scroller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.collection-card {
+    background: var(--color-bg-soft);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.collection-card:hover {
+    transform: scale(1.02);
+}
+
+.card-ph {
+    height: 400px;
+}
+
+.card-info {
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-info h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* 4. Studio Picks - Curator's Showcase */
+.picks-layout {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+}
+
+.picks-curation-info h2 {
+    font-size: 50px;
+    line-height: 1.1;
+    margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.picks-curation-info h2 em {
+    font-family: 'Pinyon Script', cursive;
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+/* Selection Criteria - Trust Line */
+.selection-criteria {
+    margin: var(--spacing-xl) 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.ph-visual {
+    background: var(--color-bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-family: var(--font-technical);
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ph-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.ph-visual:hover img {
+    transform: scale(1.05);
+}
+
+.criteria-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+.criteria-item .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.artist-signature {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--spacing-lg);
+}
+
+.sig-label {
+    font-family: var(--font-technical);
+    font-size: 9px;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.sig-name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-text-primary);
+}
+
+/* Showcase Grid */
+.picks-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    position: relative;
+    padding: 40px 0;
+}
+
+.pick-item {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pick-primary { transform: none; }
+.pick-secondary { transform: none; }
+
+.pick-ph {
+    height: 380px;
+    border-radius: 200px 200px 0 0; /* Arched style */
+    overflow: hidden;
+    background: var(--color-bg-deep);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.pick-item:hover {
+    transform: translateY(0) scale(1.02);
+    z-index: 10;
+}
+
+.pick-badge-premium {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: var(--color-bg-deep);
+    padding: 6px 20px;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 30;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    white-space: nowrap;
+}
+
+/* Hover Overlay */
+.pick-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 11, 11, 0.9);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-lg);
+    transform: translateY(101%);
+    transition: transform 0.5s ease;
+    text-align: center;
+}
+
+.pick-item:hover .pick-overlay {
+    transform: translateY(0);
+}
+
+.pick-overlay p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px;
+}
+
+.spec-id {
+    display: block;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.pick-info {
+    padding: var(--spacing-md) 0 var(--spacing-md);
+    text-align: center;
+}
+
+.pick-category {
+    font-family: var(--font-technical);
+    font-size: 11px;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+}
+
+.pick-info h4 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* 5. Product Grid - Specimen Style */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xxl) var(--spacing-xl);
+}
+
+.product-card {
+    background: transparent;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.product-ph {
+    height: 420px;
+    background: var(--color-bg-soft);
+    border: 1px solid rgba(212, 175, 55, 0.05);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-ph {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+/* Floating Actions */
+.product-actions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    display: flex;
+    gap: 12px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.action-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    color: #0B0B0B; /* High contrast for light theme buttons */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* Status Badge */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color-accent);
+    color: #0B0B0B; /* Dark text for gold background */
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: var(--font-technical);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Product Info */
+.product-info {
+    padding: var(--spacing-lg) 0;
+}
+
+.product-id-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.product-id {
+    font-family: var(--font-technical);
+    font-size: 10px;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+}
+
+.product-cert {
+    font-family: var(--font-technical);
+    font-size: 9px;
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+.product-info h4 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+}
+
+/* Horizontal Specs */
+.product-specs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.product-specs span {
+    font-family: var(--font-technical);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+}
+
+.product-specs .dot {
+    width: 3px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.product-info .price {
+    font-family: var(--font-technical);
+    font-size: 18px;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* 6. Tattoo Gallery - Archival Flash Style */
+.tattoo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+}
+
+.tattoo-item {
+    background: var(--color-bg-soft);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(212, 175, 55, 0.05);
+}
+
+.tattoo-item:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.tattoo-ph {
+    height: 450px;
+    position: relative;
+    background: #000;
+}
+
+.concept-id {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    color: var(--color-accent);
+    background: rgba(11, 11, 11, 0.8);
+    padding: 4px 12px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.design-insight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(11, 11, 11, 0.95), transparent);
+    backdrop-filter: blur(5px);
+    padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-xl);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7); /* Forced contrast for dark overlay */
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 5;
+    line-height: 1.6;
+}
+
+.tattoo-item:hover .design-insight {
+    transform: translateY(0);
+}
+
+.tattoo-info {
+    padding: var(--spacing-xl);
+}
+
+.tattoo-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.style-tag {
+    font-family: var(--font-technical);
+    font-size: 11px;
+    color: var(--color-accent);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 3px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.site-recom {
+    font-family: var(--font-technical);
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.tattoo-info h4 {
+    font-size: 32px;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+}
+
+.tattoo-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.tattoo-actions .btn-primary {
+    flex: 1;
+}
+
+.tattoo-actions .btn-outline {
+    width: 48px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 7. Craft Panels - Diagnostic Blueprint Style */
+.craft-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+}
+
+.craft-panel {
+    background: var(--color-bg-soft);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    padding: var(--spacing-xxl);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.craft-panel:hover {
+    background: var(--color-bg-deep);
+    border-color: rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+}
+
+.craft-ph {
+    height: 350px;
+    margin-bottom: var(--spacing-xl);
+    border-radius: 10px;
+    background: rgba(11, 11, 11, 0.5);
+    position: relative;
+}
+
+.craft-bg-icon {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    opacity: 0.03;
+    transition: all 0.6s ease;
+}
+
+.craft-bg-icon i {
+    width: 200px;
+    height: 200px;
+    color: var(--color-accent);
+}
+
+.craft-panel:hover .craft-bg-icon {
+    opacity: 0.08;
+    transform: scale(1.1) rotate(-10deg);
+}
+
+.craft-info h3 {
+    font-size: 32px;
+    margin: 10px 0 15px;
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+}
+
+.craft-info p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Technical Specs List */
+.craft-specs {
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    padding-top: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.spec-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-technical);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spec-line span:first-child {
+    color: var(--color-text-secondary);
+}
+
+.spec-line span:last-child {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.spec-line::after {
+    content: '';
+    flex-grow: 1;
+    border-bottom: 1px dotted rgba(212, 175, 55, 0.2);
+    margin: 0 15px;
+    order: 0;
+}
+
+.spec-line span:first-child { order: -1; }
+.spec-line span:last-child { order: 1; }
+
+/* 8. Process & Experience - Wave Style */
+.process-wave-layout {
+    position: relative;
+    padding: 100px 0;
+    margin-top: 40px;
+}
+
+.process-path-svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.process-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 var(--spacing-md);
+}
+
+.step-up {
+    justify-content: flex-start;
+}
+
+.step-down {
+    justify-content: flex-end;
+}
+
+.step-content {
+    text-align: center;
+    max-width: 220px;
+    margin: 20px 0;
+}
+
+.step-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+}
+
+.step-content p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Hexagonal Node - Tall Vertical Profile */
+.step-node-hex {
+    width: 70px;
+    height: 85px;
+    background: var(--color-accent);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hex-inner {
+    width: 66px;
+    height: 81px;
+    background: var(--color-bg-soft);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex-inner i {
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent);
+}
+
+.process-step:hover .step-node-hex {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Watermark - Refined Positioning */
+.step-watermark {
+    font-family: var(--font-heading);
+    font-size: 140px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    pointer-events: none;
+    line-height: 1;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step-up .step-watermark { top: -40px; }
+.step-down .step-watermark { bottom: -40px; }
+
+@media (max-width: 992px) {
+    .process-path-svg { display: none; }
+    .process-steps { flex-direction: column; gap: var(--spacing-xxl); }
+    .process-step { flex-direction: row; text-align: left; gap: 30px; }
+    .step-content { text-align: left; margin: 0; }
+    .step-up, .step-down { justify-content: flex-start; }
+    .step-watermark { left: -20px; font-size: 80px; }
+}
+
+/* 9. Final CTA - Ecosystem Style */
+.final-cta-section {
+    padding: var(--spacing-xxl) 0;
+    overflow: hidden;
+}
+
+.cta-eco-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+    background: var(--color-bg-soft);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: var(--spacing-xxl);
+    border-radius: 30px;
+    position: relative;
+    color: var(--color-text-primary);
+}
+
+.cta-left p {
+    color: var(--color-text-secondary);
+}
+
+.cta-left h2 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: var(--spacing-md) 0 var(--spacing-xl);
+    color: var(--color-text-primary);
+}
+
+.cta-left h2 em {
+    font-family: 'Pinyon Script', cursive;
+    color: var(--color-accent);
+    font-style: normal;
+}
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+}
+
+.cta-badge i {
+    width: 14px;
+    height: 14px;
+    color: var(--color-accent);
+}
+
+.cta-badge span {
+    font-family: var(--font-technical);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    color: var(--color-bg-deep);
+    padding: 16px 40px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-pill:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Ecosystem Visual */
+.cta-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+}
+
+.ecosystem-visual {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eco-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(212, 175, 55, 0.15); /* Increased thickness and slightly more opacity */
+}
+
+.eco-ring.outer {
+    width: 100%;
+    height: 100%;
+    animation: pulse-ring 4s infinite linear;
+}
+
+.eco-ring.inner {
+    width: 60%;
+    height: 60%;
+    background: rgba(212, 175, 55, 0.02);
+}
+
+.eco-center {
+    width: 80px;
+    height: 80px;
+    background: var(--color-accent);
+    border-radius: 20px; /* Squircle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+.logo-mark {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-bg-deep);
+}
+
+.orbiting-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 15;
+    transition: all 0.3s ease;
+}
+
+.node-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.node-icon i {
+    width: 14px;
+    height: 14px;
+    color: var(--color-accent);
+}
+
+.node-label {
+    background: rgba(26,26,26,0.9);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-family: var(--font-technical);
+    font-size: 10px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF; /* High contrast on dark pill background */
+    opacity: 0.8;
+}
+
+/* Node Positions */
+.node-1 { top: 0; right: -40px; }
+.node-2 { bottom: 60px; left: -80px; }
+.node-3 { bottom: -20px; right: 20px; }
+
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+
+/* 2. Tablet & Below (991px) Legacy */
+@media (max-width: 991px) {
+
+/* ==========================================================================
+   Shop Page Mobile Stability Protocol (320px - 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .shop-section {
+        padding: 60px 0;
+    }
+
+    /* 1. Hero Section Fixes */
+    .shop-hero {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-diagonal-split {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-diag-panel {
+        position: relative !important;
+        width: 100% !important;
+        height: 50vh;
+        clip-path: none !important;
+        padding: 60px 20px !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .diag-content {
+        max-width: 100%;
+        margin: 0 !important;
+    }
+
+    .diag-content h1 {
+        font-size: 26px !important;
+        max-width: 240px;
+        margin: 15px auto !important;
+    }
+
+    .diag-content p {
+        margin: 0 auto 20px !important;
+        font-size: 14px;
+        max-width: 260px;
+    }
+
+    .diag-separator {
+        display: none !important;
+    }
+
+    /* 2. Path Cards & Navigation */
+    .dual-nav-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .path-card {
+        padding: 30px 15px !important;
+        border-radius: 0;
+    }
+
+    .path-content h3 {
+        font-size: 22px !important;
+    }
+
+    /* 3. Product & Showcase Grids */
+    .product-grid, 
+    .collections-scroller,
+    .tattoo-grid,
+    .craft-layout,
+    .picks-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .product-ph {
+        height: 350px;
+    }
+
+    .product-info h4 {
+        font-size: 18px !important;
+    }
+
+    .product-actions {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        bottom: 15px;
+    }
+
+    /* 4. Studio Picks & Centering */
+    .section-header.center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-header.center h2 {
+        margin-bottom: 30px !important; /* Added space below collection heading */
+    }
+
+    .section-tag {
+        margin: 0 auto 15px !important;
+        justify-content: center;
+    }
+
+    .picks-layout {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .picks-curation-info h2 {
+        font-size: 32px !important;
+    }
+
+    .selection-criteria {
+        flex-direction: row !important; /* Single line as requested */
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .criteria-item {
+        font-size: 8px !important; /* Micro-text to ensure single line fit */
+        letter-spacing: 1px;
+    }
+
+    /* 5. Craft Panel Heading */
+    .craft-info h3 {
+        font-size: 24px !important;
+        margin: 10px 0;
+    }
+
+    .craft-panel {
+        padding: 30px 20px !important;
+    }
+
+    /* 6. Experience Section (Process Steps) */
+    .process-step {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 15px;
+        padding: 20px !important;
+    }
+
+    .step-node-hex {
+        margin-bottom: 10px;
+        order: 1;
+    }
+
+    .step-content {
+        order: 2;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .step-number {
+        font-size: 32px !important;
+    }
+
+    .step-watermark {
+        display: none !important;
+    }
+
+    /* 7. Final CTA & Orbiting Icons */
+    .cta-eco-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 40px 15px !important;
+        gap: 40px !important;
+        text-align: center !important;
+    }
+    .cta-left {
+        order: 1 !important;
+        width: 100% !important;
+    }
+    .cta-right {
+        order: 2 !important;
+        width: 100% !important;
+        height: 200px !important;
+        margin-top: 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .cta-left h2 {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin: 15px auto !important;
+        max-width: 260px !important;
+    }
+    .cta-left p {
+        font-size: 14px !important;
+        margin-bottom: 25px !important;
+        max-width: 240px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .btn-pill {
+        width: 100% !important;
+        padding: 16px 24px !important;
+        font-size: 13px !important;
+        justify-content: center !important;
+    }
+
+    .ecosystem-visual {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    .eco-center {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .orbiting-node {
+        transform: scale(0.7) !important;
+    }
+
+    .node-label {
+        display: none !important;
+    }
+
+    .node-1 { top: 0; right: 5px; }
+    .node-2 { bottom: 40px; left: -15px; }
+    .node-3 { bottom: -10px; right: 35px; }
+}
+@media (min-width: 768px) and (max-width: 1023px) { 
+    .hero-diagonal-split { display: flex !important; flex-direction: row !important; height: 60vh !important; gap: 0 !important; } 
+    .hero-diag-panel { 
+        width: 50% !important; 
+        height: 100% !important; 
+        padding: 40px !important; 
+        clip-path: none !important; 
+        margin: 0 !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    } 
+    .hero-diag-panel.panel-left { text-align: left !important; } 
+    .hero-diag-panel.panel-right { text-align: right !important; }
+    .hero-diag-panel.panel-right .diag-content { margin-left: auto !important; margin-right: 0 !important; }
+    
+    .diag-bg img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    .diag-content h1 { font-size: 36px !important; } 
+    .diag-content p { font-size: 13px !important; } 
+    .diag-separator { display: none !important; } 
+    
+    .dual-nav-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px !important; } 
+    .path-card { padding: 30px 20px !important; } 
+    .path-content h3 { font-size: 24px !important; } 
+    
+    .collections-scroller { grid-template-columns: repeat(3, 1fr) !important; gap: 15px !important; } 
+    .product-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 20px !important; } 
+    .product-ph { height: 280px !important; } 
+    
+    .picks-layout { 
+        grid-template-columns: 1fr !important; 
+        gap: 40px !important; 
+        text-align: center !important; 
+    } 
+    
+    .picks-curation-info {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .selection-criteria { 
+        justify-content: center !important; 
+    } 
+
+    .picks-showcase {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .pick-ph {
+        height: 400px !important;
+    }
+
+    .craft-layout { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; } 
+    
+    .craft-panel {
+        padding: 30px !important;
+    }
+
+    .craft-ph {
+        height: 280px !important;
+    }
+    
+    /* The Experience Section Refinement */
+    .process-steps {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    .process-step {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .process-path-svg { display: none !important; }
+
+    .cta-left h2 {
+        font-size: 34px !important;
+        line-height: 1.2 !important;
+    }
+
+    .cta-eco-layout { grid-template-columns: 1fr 1fr !important; gap: 20px !important; text-align: left !important; } 
+    .cta-right { height: 300px !important; margin-top: 0 !important; display: flex !important; justify-content: center !important; align-items: center !important; } 
+    
+    .ecosystem-visual {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    .orbiting-node {
+        transform: scale(0.75) !important;
+    }
+
+    .node-label { 
+        display: flex !important; 
+        opacity: 1 !important; 
+        visibility: visible !important; 
+        font-size: 9px !important;
+        padding: 4px 10px !important;
+    }
+}
+
+
+/* ==========================================================================
+   Shop Page 320px Tactical Fail-Safe
+   ========================================================================== */
+
+

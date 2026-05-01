@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+p { 
+  font-size: var(--fs-body); 
+  color: var(--color-text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  font-weight: 400; /* Standardized thin weight for premium look */
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+/* Utilities */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding, var(--spacing-lg));
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.bg-soft {
+  background-color: var(--color-bg-soft);
+}
+
+.placeholder-img {
+  background-color: var(--color-bg-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholder-img::after {
+  content: 'PIERZA';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: rgba(229, 229, 229, 0.05);
+  pointer-events: none;
+}
+
+/* Footer */
+.footer {
+  padding: 80px 0 30px;
+  background-color: var(--color-bg-deep);
+  border-top: 1px solid rgba(229, 229, 229, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+  gap: var(--spacing-xl);
+  padding-bottom: 60px;
+}
+
+.footer-brand .logo {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.footer-brand p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--color-accent);
+  color: #0B0B0B; /* Consistent dark text on gold hover */
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+
+.social-link i {
+  width: 18px;
+  height: 18px;
+}
+
+
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h4 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-links a {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+  padding-left: 5px;
+}
+
+/* Newsletter Column */
+.newsletter-column h4 {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+}
+
+.newsletter-column p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.5;
+}
+
+.newsletter-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-box:focus-within {
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-input {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 15px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  outline: none;
+}
+
+.newsletter-btn {
+  width: 44px;
+  height: 44px;
+  background: var(--color-accent);
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0B0B0B; /* Dark text for gold background */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: var(--color-text-primary);
+  color: var(--color-bg-soft);
+  transform: scale(1.05);
+}
+
+.newsletter-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+  margin-top: 15px;
+}
+
+.footer-bottom {
+  padding: 30px 0;
+  border-top: 1px solid rgba(229, 229, 229, 0.05);
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-wrapper p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+
+
+/* Light Mode Social Fix */
+[data-theme="light"] .social-link {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .newsletter-box {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Utilities */
+@media (max-width: 1024px) {
+  .mobile-only {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 60px 40px !important;
+    text-align: left !important;
+  }
+  
+  .footer-links:nth-child(2) { order: 1 !important; }
+  .footer-links:nth-child(3) { order: 2 !important; }
+  .footer-brand { order: 3 !important; }
+  .newsletter-column { order: 4 !important; }
+
+  .bottom-wrapper {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-gold {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+/* 14. Theme Contrast Utilities */
+.dark-section {
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-primary);
+}
+
+.dark-section h1, 
+.dark-section h2, 
+.dark-section h3, 
+.dark-section h4, 
+.dark-section h5, 
+.dark-section h6 {
+  color: var(--color-text-primary);
+}
+
+.dark-section p {
+  color: var(--color-text-secondary);
+}
+
+.dark-section .eyebrow {
+  color: var(--color-accent);
+}
+
+/* Image Overlays */
+.img-overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 11, 11, 0.7); /* Forced dark for light mode visibility */
+  z-index: 1;
+}
+
+.img-overlay-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Sovereign Stacking Protocol (Global)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  /* Force all grid containers to column-stack */
+  .footer-grid,
+  .hero-split-wrapper,
+  .anatomy-grid,
+  .tiers-grid,
+  .manifesto-grid,
+  .journal-grid,
+  .dash-grid,
+  .visual-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xl) !important;
+  }
+
+  /* Image Order Management */
+  .order-mobile-1 { order: 1 !important; }
+  .order-mobile-2 { order: 2 !important; }
+  
+  /* Generic Stack Helper */
+  .sovereign-stack {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* ==========================================================================
+   The Sovereign Container (Desktop Luxury)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container-max-width);
+    padding: 0 var(--spacing-xxl);
+  }
+}

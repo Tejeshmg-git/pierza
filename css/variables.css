@@ -1,0 +1,101 @@
+:root {
+  /* Colors */
+  --color-bg-deep: #0B0B0B;
+  --color-bg-soft: #1A1A1A;
+  --color-accent: #D4AF37;
+  --color-text-primary: #E5E5E5;
+  --color-text-secondary: #A1A1A1;
+
+  /* Fonts */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Breakpoints (New Protocol) */
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 991px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1440px;
+
+  /* Layout Standards */
+  --hero-min-height: 70vh;
+  --navbar-height: 80px;
+  --sidebar-width: 280px;
+  --container-max-width: 1400px;
+  --container-padding: 60px;
+
+  /* Spacing Tokens */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 80px;
+
+  /* Typography Hierarchy (Desktop Base) */
+  --fs-base: 16px;
+  --fs-h1: 48px;
+  --fs-h2: 40px;
+  --fs-h3: 32px;
+  --fs-h4: 24px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-xs: 14px; /* Minimum 14px as requested */
+
+  /* Theme-Specific (Default Dark) */
+  --color-card-bg: var(--color-bg-soft);
+  --color-card-text: var(--color-text-primary);
+  --color-card-subtext: var(--color-text-secondary);
+  --color-card-btn-bg: rgba(255, 255, 255, 0.05);
+  --color-card-btn-text: var(--color-text-primary);
+  --color-switch-bg: rgba(255, 255, 255, 0.1);
+  --color-switch-knob: #FFFFFF;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* 1. Laptop Shift (1024px Tactical Shrinkage) */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 240px;
+    --container-padding: 40px;
+    --fs-h1: 42px;
+    --fs-h2: 36px;
+  }
+}
+
+/* 2. Tablet Shift (768px Hybrid Adaptability) */
+@media (max-width: 991px) {
+  :root {
+    --container-padding: 30px;
+    --fs-h1: 38px;
+    --fs-h2: 32px;
+    --fs-h3: 28px;
+  }
+}
+
+/* 3. Mobile Shift (320px-767px Stability Protocol) */
+@media (max-width: 767px) {
+  :root {
+    --fs-base: 15px;
+    --fs-h1: 32px;
+    --fs-h2: 28px;
+    --fs-h3: 24px;
+    --fs-body: 15px;
+    --container-padding: 20px; /* Locked Padding Protocol */
+  }
+}
+
+[data-theme="light"] {
+  --color-bg-deep: #F5F5F5;
+  --color-bg-soft: #FFFFFF;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-accent: #B8860B; /* Deep gold for light mode contrast */
+  
+  --color-card-btn-bg: rgba(0, 0, 0, 0.05);
+  --color-switch-bg: rgba(0, 0, 0, 0.1);
+  --color-switch-knob: #FFFFFF;
+}
+

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Pierza Studio - Anatomical Excellence</title>
+    <meta name="description" content="Discover the origins and precision-driven philosophy of Pierza Studio. We merge biological anatomy with geometric jewelry design.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <script src="https://unpkg.com/lucide@0.262.0"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css?v=1.1">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body class="about-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="logo">
+                <svg viewBox="0 0 100 100" class="studio-logo">
+                    <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                    <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                    <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                </svg>
+                PIERZA<span>STUDIO</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">HOME V1</a>
+                <a href="../index-v2.html" class="nav-link">HOME V2</a>
+                <a href="about.html" class="nav-link active">ABOUT</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="shop.html" class="nav-link">SHOP</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+                <a href="dashboard.html" class="nav-link dashboard-link">DASHBOARD</a>
+
+                <div class="mobile-nav-tools mobile-only">
+                    <div class="nav-control-item">
+                        <span>Theme</span>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="nav-control-item">
+                        <span>RTL View</span>
+                        <label class="switch">
+                            <input type="checkbox" id="rtl-toggle-mobile">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <a href="login.html" class="login-cta">Login to Studio</a>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle desktop-only" id="theme-toggle" title="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle desktop-only" id="rtl-toggle">RTL</button>
+                <a href="login.html" class="login-cta desktop-only">Login</a>
+                <button class="menu-btn mobile-only" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="about-section about-hero">
+            <div class="container about-container">
+                <div class="about-hero-split">
+                    <div class="about-hero-content">
+                        <span class="eyebrow">The Studio</span>
+                        <h1>Anatomical Artistry.<br>Industrial Precision.</h1>
+                        <p class="util-desc">Pierza Studio exists at the intersection of biological architecture and geometric design, crafting curation sequences that harmonize with the human form.</p>
+                        
+                        <div class="hero-actions-group">
+                            <a href="#origin" class="btn btn-primary">Our Origin</a>
+                            <a href="portfolio.html" class="btn btn-outline">View Sequences</a>
+                        </div>
+
+                        <div class="hero-trust-row">
+                            <div class="trust-item"><i data-lucide="shield-check"></i> ISO_10993</div>
+                            <div class="trust-item"><i data-lucide="microscope"></i> BIO_METRIC</div>
+                            <div class="trust-item"><i data-lucide="gem"></i> 14K_ATELIER</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-hero-visual-container">
+                        <div class="ph-visual hero-visual-large">
+                            <img src="../assets/images/about/herosection-img.jpg" alt="Pierza Studio Anatomy Visual" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="floating-stat-badge">
+                            <span class="badge-num">0.01mm</span>
+                            <span class="badge-label">Mapping_Precision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Origin Section -->
+        <section id="origin" class="about-section" style="background: rgba(255,255,255,0.01);">
+            <div class="container about-container">
+                <div class="origin-grid">
+                    <div class="origin-visual-side">
+                        <div class="origin-year-large">2022</div>
+                        <div class="ph-visual origin-main-ph">
+                            <img src="../assets/images/about/Our Story.jpg" alt="Pierza Origin Archive" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="floating-tech-tag tag-1">
+                                <span>PHASE_ALPHA</span>
+                                <span>Conceptual Foundation</span>
+                            </div>
+                            <div class="floating-tech-tag tag-2">
+                                <span>NODE_NYC</span>
+                                <span>Primary Atelier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="origin-content-side">
+                        <span class="eyebrow">Our Story</span>
+                        <h2>A Vision for Geometric Balance.</h2>
+                        <p class="highlight-quote">"We do not decorate the body; we map its architectural potential."</p>
+                        <div class="origin-text">
+                            <p>Founded in 2022 by Elias Pierza, the studio was born from a desire to move beyond traditional adornment. We viewed the human body not as a canvas, but as a complex biological structure that deserved jewelry of equal engineering integrity.</p>
+                            <p>Our journey began with a single mapping sequence, exploring how light interacts with orbital bone structures. Today, Pierza Studio is a global node for those who seek technical excellence and anatomical resonance.</p>
+                        </div>
+                        <div class="tech-label-group">
+                            <div class="tech-label"><span>FOUNDER</span><span>ELIAS PIERZA</span></div>
+                            <div class="tech-label"><span>ESTABLISHED</span><span>Q1 2022</span></div>
+                            <div class="tech-label"><span>LOCATION</span><span>NYC // GLOBAL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Pillars Section -->
+        <section class="about-section">
+            <div class="container about-container">
+                <div class="section-header center">
+                    <span class="eyebrow">Principles</span>
+                    <h2>Pillars of Precision.</h2>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="ph-visual pillar-visual"><img src="../assets/images/about/Anatomy.jpg" alt="Anatomy" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h3>Anatomy</h3>
+                        <p>Every sequence is calibrated to anatomical landmarks for a seamless integration of artistic form and function.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="ph-visual pillar-visual gold"><img src="../assets/images/about/Materiality.jpg" alt="Materiality" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h3>Materiality</h3>
+                        <p>We utilize clinical-grade steel and solid gold, ensuring absolute structural longevity and biocompatibility.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="ph-visual pillar-visual"><img src="../assets/images/about/Logic.jpg" alt="Logic" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h3>Logic</h3>
+                        <p>Our process follows strict geometric logic, ensuring every curve serves a defined and structural purpose.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="ph-visual pillar-visual gold"><img src="../assets/images/about/Minimal.jpg" alt="Minimal" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h3>Minimal</h3>
+                        <p>We strip away unnecessary, focusing on forms that resonate with organic flow of the human body.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Process Section -->
+        <section class="about-section" style="background: rgba(255,255,255,0.01);">
+            <div class="container about-container">
+                <div class="section-header center">
+                    <span class="eyebrow">Method</span>
+                    <h2>The Curation Sequence.</h2>
+                </div>
+                
+                <div class="process-timeline">
+                    <!-- Step 01 -->
+                    <div class="sequence-step">
+                        <div class="step-content">
+                            <h3>01. Anatomical Mapping</h3>
+                            <p>We begin by mapping the unique topographical landmarks of the client's anatomy using high-precision vector scanning.</p>
+                        </div>
+                        <div class="step-marker">01</div>
+                        <div class="step-meta">
+                            ANATOMICAL_DIAGNOSTIC // PHASE_ALPHA
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="sequence-step">
+                        <div class="step-content">
+                            <h3>02. Geometric Blueprint</h3>
+                            <p>A technical schematic is generated, aligning the jewelry forms with the skeletal and muscular flow of the body.</p>
+                        </div>
+                        <div class="step-marker">02</div>
+                        <div class="step-meta">
+                            BLUEPRINT_GENERATION // NODE_CALIBRATION
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="sequence-step">
+                        <div class="step-content">
+                            <h3>03. Material Selection</h3>
+                            <p>Materials are selected based on their bio-compatibility and aesthetic resonance with the client's skin tone.</p>
+                        </div>
+                        <div class="step-marker">03</div>
+                        <div class="step-meta">
+                            METALLURGY_SELECT // GRADE_316L
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="sequence-step">
+                        <div class="step-content">
+                            <h3>04. Curation Finalization</h3>
+                            <p>The sequence is completed with a final fitment and clinical verification of all architectural placement points.</p>
+                        </div>
+                        <div class="step-marker">04</div>
+                        <div class="step-meta">
+                            FINAL_SEQUENCE // ATELIER_VERIFIED
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Materiality Section -->
+        <section class="about-section">
+            <div class="container about-container">
+                <div class="materials-layout">
+                    <div class="materials-content">
+                        <span class="eyebrow">Craft</span>
+                        <h2>Obsidian & Gold.</h2>
+                        
+                        <div class="material-item-list">
+                            <div class="material-item">
+                                <i data-lucide="shield"></i>
+                                <div class="material-info">
+                                    <h4>Surgical Steel 316L</h4>
+                                    <p>The foundation of durability. Bio-compatible and engineered for industrial-grade longevity.</p>
+                                </div>
+                            </div>
+                            <div class="material-item">
+                                <i data-lucide="gem"></i>
+                                <div class="material-info">
+                                    <h4>14K Solid Gold</h4>
+                                    <p>Pure aesthetic depth. Our gold is conflict-free and calibrated for anatomical brilliance.</p>
+                                </div>
+                            </div>
+                            <div class="material-item">
+                                <i data-lucide="zap"></i>
+                                <div class="material-info">
+                                    <h4>Aerospace Titanium</h4>
+                                    <p>Ultra-lightweight and hypoallergenic. Chosen for complex orbital placements.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="craft-highlight">
+                            "Every material is selected for its clinical depth and visual resonance."
+                        </div>
+                    </div>
+                    <div class="material-specs-dashboard">
+                        <!-- Group 1: Composition -->
+                        <div class="spec-group">
+                            <h5>Molecular Composition</h5>
+                            <div class="comp-bar-row">
+                                <div class="bar-label"><span>Au (Pure Gold)</span><span>75%</span></div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 75%;"></div></div>
+                            </div>
+                            <div class="comp-bar-row">
+                                <div class="bar-label"><span>Ti (Grade 23)</span><span>100%</span></div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+                            </div>
+                            <div class="comp-bar-row">
+                                <div class="bar-label"><span>Cr (Chromium)</span><span>18%</span></div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 18%;"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- Group 2: Data -->
+                        <div class="spec-group">
+                            <h5>Engineering Data</h5>
+                            <div class="spec-table">
+                                <div class="table-cell">
+                                    <span class="cell-label">Tensile Strength</span>
+                                    <span class="cell-value">860 MPa</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="cell-label">Melting Point</span>
+                                    <span class="cell-value">1668 °C</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="cell-label">Bio-Compatibility</span>
+                                    <span class="cell-value">ISO 10993</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="cell-label">Hardness (HV)</span>
+                                    <span class="cell-value">320-380</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Timeline Section -->
+        <section class="about-section">
+            <div class="container about-container">
+                <div class="section-header center">
+                    <span class="eyebrow">History</span>
+                    <h2>Epochs of Growth.</h2>
+                </div>
+                <div class="growth-chronology">
+                    <!-- Epoch 01 -->
+                    <div class="epoch-item">
+                        <div class="epoch-card">
+                            <div class="epoch-date-box">
+                                <span class="date">JAN 2022</span>
+                            </div>
+                            <div class="epoch-info-box">
+                                <h3>The Origin</h3>
+                                <p>Founded as a private research collective, we began exploring the profound intersection between advanced biological anatomy and the precision of geometric jewelry design principles to redefine body art.</p>
+                                <div class="epoch-meta">INIT_SEQUENCE // NYC_LAB_01</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epoch 02 -->
+                    <div class="epoch-item">
+                        <div class="epoch-card">
+                            <div class="epoch-date-box">
+                                <span class="date">MAR 2023</span>
+                            </div>
+                            <div class="epoch-info-box">
+                                <h3>Precision Mapping</h3>
+                                <p>The launch of our proprietary vector-mapping protocol marked a new era of accuracy, bringing surgical-grade biological measurements to the artistic placement of every individual jewelry sequence.</p>
+                                <div class="epoch-meta">VECTOR_BETA // ANATOMY_v2.0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epoch 03 -->
+                    <div class="epoch-item">
+                        <div class="epoch-card">
+                            <div class="epoch-date-box">
+                                <span class="date">FEB 2024</span>
+                            </div>
+                            <div class="epoch-info-box">
+                                <h3>Studio Atelier</h3>
+                                <p>We opened our flagship Pierza Studio atelier in New York, creating a specialized industrial sanctuary designed specifically for high-end anatomical curations and absolute artisanal excellence.</p>
+                                <div class="epoch-meta">FLAGSHIP_OPEN // ATELIER_ACTIVE</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Epoch 04 -->
+                    <div class="epoch-item">
+                        <div class="epoch-card">
+                            <div class="epoch-date-box">
+                                <span class="date">2025 +</span>
+                            </div>
+                            <div class="epoch-info-box">
+                                <h3>Future Horizons</h3>
+                                <p>Pierza Studio is expanding its architectural reach to global fashion capitals, aiming to define the next generational era of high-end biological art through technical innovation and design.</p>
+                                <div class="epoch-meta">EXPANSION_NODE // GLOBAL_AURA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Team Section -->
+        <section class="about-section" style="background: rgba(255,255,255,0.01);">
+            <div class="container about-container">
+                <div class="section-header center">
+                    <span class="eyebrow">The Collective</span>
+                    <h2>Curators of the Vision.</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="ph-visual team-visual">
+                            <img src="../assets/images/about/Elias Pierza.jpg" alt="Elias Pierza">
+                        </div>
+                        <h3>Elias Pierza</h3>
+                        <p>Lead Anatomical Architect</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="ph-visual team-visual gold">
+                            <img src="../assets/images/about/Sora Chen.jpg" alt="Sora Chen">
+                        </div>
+                        <h3>Sora Chen</h3>
+                        <p>Chief of Organic Strategy</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="ph-visual team-visual">
+                            <img src="../assets/images/about/Marcus Vane.jpg" alt="Marcus Vane">
+                        </div>
+                        <h3>Marcus Vane</h3>
+                        <p>Industrial Design Specialist</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="ph-visual team-visual gold">
+                            <img src="../assets/images/about/Elena Voss.jpg" alt="Elena Voss">
+                        </div>
+                        <h3>Elena Voss</h3>
+                        <p>Bio-Material Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA Section - Atelier Invitation -->
+        <section class="about-cta-v2">
+            <div class="container cta-v2-wrapper">
+                <div class="cta-v2-content">
+                    <span class="eyebrow">Atelier Membership</span>
+                    <h2>Join 2,000+ curators defining their anatomical aura.</h2>
+                    <p>Stay aligned with our latest curation sequences and atelier insights.</p>
+                    
+                    <div class="hero-trust-row" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                        <div class="trust-item"><i data-lucide="shield-check"></i> BIO_SAFE</div>
+                        <div class="trust-item"><i data-lucide="globe"></i> GLOBAL_NODES</div>
+                        <div class="trust-item"><i data-lucide="award"></i> ISO_10993</div>
+                    </div>
+                </div>
+                
+                <div class="cta-v2-card-container">
+                    <div class="cta-corner top-right"></div>
+                    <div class="cta-corner bottom-left"></div>
+                    <div class="cta-glass-card">
+                        <p class="card-desc">Receive real-time insights into new material drops and exclusive biological art mappings. Our atelier is designed to keep your aesthetic ahead of the curve.</p>
+                        <form class="cta-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">Join Atelier</button>
+                        </form>
+                        <p class="card-footer">We care about your aesthetic data in our <a href="#">privacy policy</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-badge">
+                <span>curated by</span>
+                <span class="logo-mini">PIERZA</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">
+                    <svg viewBox="0 0 100 100" class="studio-logo">
+                        <path d="M50 10 L50 90 M42 30 Q50 15 58 30 M45 80 L50 92 L55 80" fill="none" stroke="currentColor"/>
+                        <circle cx="50" cy="10" r="3" fill="currentColor"/>
+                        <path d="M35 50 Q50 35 65 50" opacity="0.6" fill="none" stroke="currentColor"/>
+                    </svg>
+                    PIERZA<span>STUDIO</span>
+                </a>
+                <p>The premier destination for anatomical precision and curated aesthetics. Crafting excellence in every placement.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="../index.html">Home V1</a>
+                <a href="../index-v2.html">Home V2</a>
+                <a href="shop.html">Shop</a>
+                <a href="404.html">404 Error</a>
+                <a href="coming-soon.html">Coming Soon</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+
+            <div class="newsletter-column">
+                <h4>Newsletter</h4>
+                <p>Join 1,000+ collectors receiving peak-hour curation insights and pro tips.</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Your Email" class="newsletter-input">
+                    <button type="button" class="newsletter-btn">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+                <div class="newsletter-note">
+                    <i data-lucide="shield-check"></i>
+                    <span>No spam. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container bottom-wrapper">
+                <p>&copy; 2026 PIERZA STUDIO. ALL RIGHTS RESERVED.</p>
+                <p>BUILT FOR EXCELLENCE, BY PIERZA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
