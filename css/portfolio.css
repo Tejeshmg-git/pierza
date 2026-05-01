@@ -1153,6 +1153,22 @@ cite {
         margin: 0 auto 15px;
     }
 
+    /* Macro View Specs Vertical Protocol */
+    .material-specs {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        margin-top: 40px !important;
+    }
+
+    .m-spec-item {
+        width: 100% !important;
+        padding-left: 25px !important;
+        border-left: 1.5px solid var(--color-accent) !important;
+        text-align: left !important;
+    }
+}
+
     .cta-content .eyebrow,
     .hero-left .eyebrow {
         justify-content: center;
@@ -1360,7 +1376,7 @@ cite {
 
     .material-specs {
         display: flex !important;
-        flex-direction: row !important;
+        flex-direction: column !important;
         justify-content: center !important;
         gap: 30px !important;
         text-align: left !important;
