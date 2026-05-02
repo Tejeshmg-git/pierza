@@ -291,25 +291,28 @@
 
 .btn-primary {
   background-color: var(--color-accent);
-  color: var(--color-bg-deep);
+  color: var(--color-on-accent);
 }
 
 .btn-primary:hover {
   background-color: var(--color-text-primary);
+  color: var(--color-bg-deep);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
-  background-color: transparent;
-  border: 1px solid rgba(229, 229, 229, 0.2);
+  background-color: rgba(212, 175, 55, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   color: var(--color-text-primary);
 }
 
 .btn-secondary:hover {
+  background-color: rgba(212, 175, 55, 0.08);
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
@@ -320,7 +323,7 @@
 
 .btn-outline:hover {
   background-color: var(--color-accent);
-  color: var(--color-bg-deep);
+  color: var(--color-on-accent);
   transform: translateY(-3px);
 }
 

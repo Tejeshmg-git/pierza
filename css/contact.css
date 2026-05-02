@@ -57,7 +57,7 @@
 
 .onboarding-input-group:focus-within {
     border-color: var(--color-accent);
-    background: rgba(11, 11, 11, 1);
+    background: var(--color-bg-deep);
 }
 
 .onboarding-input {
@@ -462,7 +462,7 @@
 .form-input:focus {
     outline: none;
     border-color: var(--color-accent);
-    background: rgba(11, 11, 11, 0.8);
+    background: var(--color-bg-soft);
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
 }
 
@@ -638,10 +638,18 @@ textarea.form-input {
     opacity: 0.5;
 }
 
+.card-title {
+    font-size: 28px;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 5;
+}
+
 .request-form-mini {
     position: relative;
     z-index: 5;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .mini-input {
@@ -659,7 +667,13 @@ textarea.form-input {
 .mini-input:focus {
     outline: none;
     border-color: var(--color-accent);
-    background: rgba(11, 11, 11, 1);
+    background: var(--color-bg-soft);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.mini-input option {
+    background: var(--color-bg-soft);
+    color: var(--color-text-primary);
 }
 
 .submit-pill {
@@ -750,9 +764,9 @@ textarea.form-input {
     background: var(--color-bg-soft);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 4px 16px 4px 4px;
+    padding: 8px 24px 8px 8px;
     border-radius: 50px;
-    gap: 12px;
+    gap: 16px;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -903,14 +917,15 @@ textarea.form-input {
 
     .map-visual-container {
         position: relative !important;
-        height: 300px;
-        width: 100%;
-        padding: 0 20px; /* Added horizontal gap as requested */
-        background: var(--color-bg-deep);
+        height: 320px !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+        background: transparent !important;
     }
 
-    .map-base-visual {
-        border-radius: 15px; /* Softer edges for the inset look */
+    .map-placeholder {
+        border-radius: 20px !important;
+        overflow: hidden !important;
     }
 
     .map-info-module {
@@ -918,15 +933,30 @@ textarea.form-input {
         top: 0 !important;
         left: 0 !important;
         transform: none !important;
-        max-width: 100% !important;
-        padding: 40px 20px !important;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
+        width: calc(100% - 20px) !important;
+        max-width: none !important;
+        margin: 20px auto 40px !important;
+        padding: 60px 25px !important;
+        border-radius: 24px !important;
+        background: var(--color-bg-soft) !important;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05) !important;
+        text-align: center !important;
+        border: 1px solid rgba(212, 175, 55, 0.05) !important;
     }
 
     .map-info-module h3 {
         font-size: 28px !important;
+        margin: 20px auto !important;
+    }
+
+    .map-info-module p {
+        margin: 0 auto 25px !important;
+        max-width: 280px;
+    }
+
+    .map-actions {
+        display: flex !important;
+        justify-content: center !important;
     }
 
     .map-coords {
@@ -936,9 +966,10 @@ textarea.form-input {
     /* 4. Booking Module */
     .booking-module {
         padding: 40px 20px !important;
-        border-radius: 0;
-        max-width: 290px;
-        margin: 0 auto;
+        border-radius: 20px !important;
+        width: calc(100% - 20px) !important;
+        max-width: none !important;
+        margin: 0 auto !important;
     }
 
     .form-grid {
@@ -1014,10 +1045,25 @@ textarea.form-input {
     }
 
     .section-tag {
+        display: inline-flex !important;
+        width: auto !important;
+        max-width: 90% !important;
+        margin: 0 auto 15px !important;
+        padding: 8px 20px !important;
         justify-content: center;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
+        gap: 10px !important;
+    }
+
+    .section-tag i {
+        width: 16px !important;
+        height: 16px !important;
+        padding: 0 !important;
+        background: none !important;
+    }
+
+    .section-tag span {
+        font-size: 9px !important;
+        letter-spacing: 1.5px !important;
     }
 }
 /* ==========================================================================
@@ -1122,7 +1168,25 @@ textarea.form-input {
     }
 
     .info-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 15px !important; }
-    .info-card { padding: 20px !important; }
+    .info-card { 
+        padding: 30px 20px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .info-card h3 {
+        min-height: 32px !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+    }
+    .info-details {
+        min-height: 100px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
     .faq-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
 
     /* Map Info Module Refinement */

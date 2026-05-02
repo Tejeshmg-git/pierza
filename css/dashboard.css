@@ -219,14 +219,45 @@ input:checked + .slider:before {
 .header-tools {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+}
+
+.dash-header-toggles {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.dash-header-toggles .rtl-toggle {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hide-on-mobile {
+    display: none !important;
+}
+
+.hide-on-desktop {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .hide-on-mobile {
+        display: flex !important;
+    }
+    .hide-on-desktop {
+        display: none !important;
+    }
 }
 
 .dash-search {

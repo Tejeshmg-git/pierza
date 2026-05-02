@@ -876,16 +876,29 @@
 .cta-form input {
     flex-grow: 1;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--color-text-secondary); /* Thicker & Visible */
     border-radius: 12px;
     padding: 14px 20px;
     color: var(--color-text-primary);
     font-family: var(--font-body);
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 .cta-form input:focus {
     outline: none;
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+[data-theme="light"] .cta-form input {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .cta-form input:focus {
+    background: rgba(0, 0, 0, 0.05);
     border-color: var(--color-accent);
 }
 
@@ -980,6 +993,10 @@
         order: 1;
         text-align: center;
         padding-left: 0;
+    }
+
+    .tech-label-group {
+        justify-content: center;
     }
 
     .origin-visual-side {

@@ -63,7 +63,7 @@
                 </a>
 
                 <!-- System Controls -->
-                <div class="dash-controls-grid">
+                <div class="dash-controls-grid hide-on-desktop">
                     <label class="dash-control-item">
                         <span>Theme</span>
                         <span class="switch">
@@ -80,7 +80,7 @@
                     </label>
                 </div>
 
-                <a href="../index.html" class="dash-nav-link">
+                <a href="../index.html" class="dash-nav-link hide-on-desktop">
                     <i data-lucide="home"></i> Back to Home
                 </a>
                 
@@ -98,12 +98,16 @@
                 </button>
                 
                 <div class="header-tools">
-                    <div class="dash-search">
-                        <i data-lucide="search"></i>
-                        <input type="text" placeholder="Search...">
-                    </div>
-                    
                     <div class="header-actions">
+                        <div class="dash-header-toggles hide-on-mobile">
+                            <button class="dash-header-btn theme-toggle" title="Toggle Theme">
+                                <i data-lucide="moon"></i>
+                            </button>
+                            <button class="dash-header-btn rtl-toggle" title="Toggle RTL">
+                                RTL
+                            </button>
+                        </div>
+
                         <button class="dash-header-btn">
                             <i data-lucide="bell"></i>
                         </button>

@@ -3,6 +3,7 @@
   --color-bg-deep: #0B0B0B;
   --color-bg-soft: #1A1A1A;
   --color-accent: #D4AF37;
+  --color-on-accent: #0B0B0B;
   --color-text-primary: #E5E5E5;
   --color-text-secondary: #A1A1A1;
 
@@ -93,6 +94,7 @@
   --color-text-primary: #1A1A1A;
   --color-text-secondary: #4A4A4A;
   --color-accent: #B8860B; /* Deep gold for light mode contrast */
+  --color-on-accent: #0B0B0B;
   
   --color-card-btn-bg: rgba(0, 0, 0, 0.05);
   --color-switch-bg: rgba(0, 0, 0, 0.1);
