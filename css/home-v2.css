@@ -25,10 +25,11 @@
 }
 
 .hero-left h1 {
-  font-size: 48px; 
+  font-size: var(--fs-h1); 
   line-height: 1.1;
   margin: var(--spacing-md) 0;
   text-transform: none;
+  font-family: var(--font-heading);
 }
 
 .hero-left h1 .text-accent {
@@ -202,7 +203,7 @@
 
 /* 2. Seasonal Lookbook (Carousel) */
 .seasonal-lookbook {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
   overflow: hidden;
 }
 
@@ -351,7 +352,7 @@
 
 /* 3. Anatomy Technical */
 .anatomy-technical {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
   background-color: var(--color-bg-soft);
   overflow: hidden;
 }
@@ -488,7 +489,7 @@
 
 /* 4. Curation Tiers */
 .curation-tiers {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
   background-color: var(--color-bg-deep);
 }
 
@@ -683,7 +684,7 @@
 
 /* 5. The Manifesto */
 .manifesto {
-  padding: 100px 0;
+  padding: var(--section-padding);
   background-color: var(--color-bg-deep);
   position: relative;
   overflow: hidden;

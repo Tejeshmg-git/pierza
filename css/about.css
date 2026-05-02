@@ -44,7 +44,7 @@
 
 /* Section Containers */
 .about-section {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--section-padding);
     position: relative;
 }
 
@@ -114,9 +114,10 @@
 }
 
 .about-hero h1 {
-    font-size: 48px;
+    font-size: var(--fs-h1);
     margin-bottom: var(--spacing-lg);
     line-height: 1.2;
+    font-family: var(--font-heading);
 }
 
 .hero-actions-group {
@@ -317,7 +318,7 @@
 }
 
 .origin-text p {
-    font-size: 16px; /* Strictly 16px for paragraphs */
+    font-size: var(--fs-body);
     line-height: 1.8;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
@@ -395,7 +396,7 @@
 }
 
 .pillar-card p {
-    font-size: 16px; /* Strictly 16px for paragraphs */
+    font-size: var(--fs-body);
     line-height: 1.6;
     color: var(--color-text-secondary);
     min-height: 80px; /* Ensures all descriptions end at the same line */
@@ -487,7 +488,7 @@
 }
 
 .step-content p {
-    font-size: 16px;
+    font-size: var(--fs-body);
     line-height: 1.6;
     color: var(--color-text-secondary);
 }
@@ -725,7 +726,7 @@
 }
 
 .epoch-info-box p {
-    font-size: 16px; /* Strictly 16px for paragraphs */
+    font-size: var(--fs-body);
     line-height: 1.6;
     color: var(--color-text-secondary);
     flex-grow: 1;

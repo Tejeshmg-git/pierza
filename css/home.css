@@ -61,7 +61,7 @@
 
 /* 3. The Art of the Aura */
 .philosophy {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
   position: relative;
   background-color: var(--color-bg-deep);
   overflow: hidden;
@@ -104,7 +104,7 @@
 
 .philosophy-lead {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: var(--fs-h3);
   line-height: 1.4;
   color: var(--color-text-secondary);
   margin: var(--spacing-md) auto var(--spacing-xl);
@@ -127,7 +127,7 @@
 
 /* 3. Featured Collections */
 .collections {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
 }
 
 .collections-grid {
@@ -153,8 +153,9 @@
 }
 
 .collection-info h3 {
-  font-size: 24px;
+  font-size: var(--fs-h4);
   margin-bottom: var(--spacing-xs);
+  font-family: var(--font-heading);
 }
 
 .collection-info p {
@@ -182,7 +183,7 @@
 
 /* 4. Portfolio Preview */
 .portfolio-preview {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
 }
 
 .portfolio-asymmetric-grid {
@@ -233,7 +234,7 @@
 
 /* 5. Studio Ritual */
 .studio-ritual {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
   background-color: var(--color-bg-soft);
 }
 
@@ -296,8 +297,8 @@
 
 /* 6. Signature Services */
 .services {
-  padding: var(--spacing-xxl) 0;
-  margin: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
+  margin: 0;
 }
 
 .services-grid {
@@ -419,7 +420,7 @@
 
 /* 7. Artist Showcase */
 .artist-showcase {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
 }
 
 .artist-wrapper {
@@ -442,7 +443,7 @@
 
 .artist-quote {
   font-family: var(--font-body);
-  font-size: 32px;
+  font-size: var(--fs-h3);
   line-height: 1.6;
   font-style: italic;
   color: var(--color-text-secondary);
@@ -534,7 +535,7 @@
 
 /* 8. Booking CTA (Enhanced) */
 .booking-cta {
-  padding: var(--spacing-xxl) 0;
+  padding: var(--section-padding);
 }
 
 .cta-card {

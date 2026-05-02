@@ -6,7 +6,7 @@
 }
 
 .contact-section {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--section-padding);
     position: relative;
 }
 
@@ -31,9 +31,10 @@
 
 /* Left Column: Initiation */
 .left-col h1 {
-    font-size: 48px;
+    font-size: var(--fs-h1);
     line-height: 1.1;
     margin: var(--spacing-md) 0 var(--spacing-lg);
+    font-family: var(--font-heading);
 }
 
 .left-col h1 em {
@@ -185,9 +186,10 @@
 }
 
 .studio-stat-block h3 {
-    font-size: 28px;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     white-space: nowrap;
+    font-family: var(--font-heading);
 }
 
 .technical-stats {
@@ -198,7 +200,7 @@
 }
 
 .stat-item .val {
-    font-size: 48px;
+    font-size: var(--fs-h1);
     font-weight: 700;
     color: var(--color-text-primary);
     line-height: 1;
@@ -254,9 +256,10 @@
 }
 
 .info-card h3 {
-    font-size: 24px;
+    font-size: var(--fs-h4);
     margin-bottom: var(--spacing-md);
     color: var(--color-text-primary);
+    font-family: var(--font-heading);
 }
 
 .info-details {
@@ -393,14 +396,15 @@
 }
 
 .map-info-module h3 {
-    font-size: 32px;
+    font-size: var(--fs-h3);
     line-height: 1.1;
     margin: var(--spacing-md) 0;
     color: var(--color-text-primary);
+    font-family: var(--font-heading);
 }
 
 .map-info-module p {
-    font-size: 16px;
+    font-size: var(--fs-body);
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xl);
     line-height: 1.6;
@@ -529,10 +533,11 @@ textarea.form-input {
 }
 
 .faq-q-content h4 {
-    font-size: 24px;
+    font-size: var(--fs-h4);
     color: var(--color-text-primary);
     margin-bottom: 0;
     transition: color 0.3s ease;
+    font-family: var(--font-heading);
 }
 
 .faq-card.active h4 {
@@ -572,7 +577,7 @@ textarea.form-input {
 }
 
 .faq-answer p {
-    font-size: 16px;
+    font-size: var(--fs-body);
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0;
@@ -605,7 +610,7 @@ textarea.form-input {
 .contact-final-cta {
     background: var(--color-bg-deep);
     border-top: 1px solid rgba(212, 175, 55, 0.1);
-    padding: 120px 0;
+    padding: var(--section-padding);
 }
 
 .cta-split-grid {

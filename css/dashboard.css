@@ -70,7 +70,7 @@
     padding: 10px 18px;
     color: rgba(255, 255, 255, 0.4);
     border-radius: 12px;
-    font-size: 13px;
+    font-size: var(--fs-small);
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -318,7 +318,7 @@ input:checked + .slider:before {
 .user-info .name {
     display: block;
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--fs-small);
 }
 
 .user-info .role {
@@ -471,7 +471,7 @@ input:checked + .slider:before {
 
 .dash-table td {
     padding: 18px 20px;
-    font-size: 14px;
+    font-size: var(--fs-small);
     border-bottom: 1px solid rgba(212, 175, 55, 0.05);
     vertical-align: middle;
 }
@@ -535,7 +535,7 @@ input:checked + .slider:before {
 
 .sync-item strong {
     display: block;
-    font-size: 14px;
+    font-size: var(--fs-small);
     margin-bottom: 2px;
 }
 
@@ -746,7 +746,7 @@ input:checked + .slider:before {
     max-width: 80%;
     padding: 12px 18px;
     border-radius: 18px;
-    font-size: 14px;
+    font-size: var(--fs-body);
     line-height: 1.5;
 }
 

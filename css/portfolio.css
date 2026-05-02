@@ -11,7 +11,7 @@
 }
 
 .portfolio-section {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--section-padding);
     position: relative;
 }
 
@@ -89,7 +89,7 @@
 
 /* Left Content */
 .hero-left h1 {
-    font-size: 48px;
+    font-size: var(--fs-h1);
     line-height: 1.1;
     margin-bottom: var(--spacing-md);
     font-family: var(--font-heading);
@@ -103,7 +103,7 @@
 }
 
 .hero-left p {
-    font-size: 18px;
+    font-size: 18px; /* High fidelity hero subtext */
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xl);
     max-width: 450px;
@@ -166,7 +166,7 @@
 }
 
 .stat-num {
-    font-size: 42px;
+    font-size: var(--fs-h1);
     font-weight: 700;
     color: var(--color-text-primary);
     line-height: 1;
@@ -356,11 +356,13 @@
 .sig-info h3 {
     font-size: var(--fs-h3);
     margin-bottom: var(--spacing-sm);
+    font-family: var(--font-heading);
 }
 
 .sig-info p {
-    font-size: 14px;
+    font-size: var(--fs-body);
     margin-bottom: var(--spacing-md);
+    color: var(--color-text-secondary);
 }
 
 .sig-footer {
