@@ -23,7 +23,7 @@
   gap: 15px;
   text-decoration: none;
   font-family: 'Cormorant Garamond', serif !important;
-  font-size: 26px;
+  font-size: var(--logo-font-size);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -32,8 +32,8 @@
 }
 
 .studio-logo {
-  width: 34px;
-  height: 34px;
+  width: var(--logo-icon-size);
+  height: var(--logo-icon-size);
   color: var(--color-accent);
 }
 
@@ -142,9 +142,6 @@
 
 /* Tactical Scaling for Laptops (1024px tier) */
 @media (max-width: 1200px) {
-  .logo {
-    font-size: 22px;
-  }
   .nav-links {
     gap: 20px;
   }
@@ -414,12 +411,12 @@
 }
 @media (max-width: 320px) {
   .logo {
-    font-size: 18px;
+    font-size: 16px;
     gap: 8px;
   }
   .studio-logo {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
   .nav-actions {
     gap: 10px;

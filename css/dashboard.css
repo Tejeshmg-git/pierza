@@ -22,7 +22,7 @@
 }
 
 .dash-brand {
-    padding: 30px 25px;
+    padding: 30px 15px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
 
 .dash-brand .logo {
     color: #fff;
-    font-size: 20px;
+    font-size: var(--logo-font-size);
     display: flex;
     align-items: center;
     gap: 8px;

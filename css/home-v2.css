@@ -1009,19 +1009,59 @@
   background-color: var(--color-bg-deep);
 }
 
-.eyebrow-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 12px;
+.faq-v2 .section-header h2 span {
+  font-family: 'Pinyon Script', cursive;
+  color: var(--color-accent);
+  font-style: normal;
+  text-transform: none;
+  margin-left: 10px;
+  font-size: 1.2em;
 }
 
-.accent-dot.gold {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
+/* Section Tag Styles */
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-bg-soft);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 8px 24px 8px 8px;
+    border-radius: 50px;
+    gap: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 24px;
+}
+
+.section-tag:hover {
+    border-color: var(--color-accent);
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateX(5px);
+}
+
+.section-tag i {
+    width: 28px;
+    height: 28px;
+    background: var(--color-bg-deep);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    padding: 6px;
+    transition: all 0.4s ease;
+}
+
+.section-tag:hover i {
+    transform: rotate(360deg);
+}
+
+.section-tag span {
+    font-family: var(--font-technical);
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--color-text-primary) !important;
+    text-transform: uppercase;
+    margin: 0 !important;
 }
 
 .squiggle {

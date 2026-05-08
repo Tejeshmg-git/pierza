@@ -337,10 +337,6 @@
         margin-bottom: var(--spacing-lg);
     }
 
-    .auth-logo .logo {
-        transform: scale(0.9);
-    }
-
     .auth-card h1 {
         font-size: 26px;
     }
