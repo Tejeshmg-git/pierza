@@ -854,6 +854,15 @@ input:checked + .slider:before {
         font-size: 28px;
     }
 
+    .dash-brand {
+        padding: 30px 15px;
+    }
+
+    .dash-brand .logo {
+        font-size: 18px;
+        gap: 6px;
+    }
+
     .user-profile-mini {
         padding-left: 15px;
         gap: 10px;
