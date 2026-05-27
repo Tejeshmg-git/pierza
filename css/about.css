@@ -232,6 +232,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible !important; /* Prevent floating tech tags from being clipped */
+}
+
+.origin-main-ph img {
+    border-radius: 4px; /* Retain rounded corners for the image with overflow: visible */
 }
 
 .floating-tech-tag {
@@ -375,9 +380,10 @@
 
 .pillar-card {
     background: rgba(255, 255, 255, 0.02);
-    padding: var(--spacing-xl);
+    padding: 0;
     border: 1px solid rgba(229, 229, 229, 0.05);
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .pillar-card:hover {
@@ -385,14 +391,27 @@
     transform: translateY(-10px);
 }
 
+[data-theme="light"] .pillar-card {
+    background-color: var(--color-bg-soft);
+    border: 2px solid rgba(184, 134, 11, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .pillar-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(184, 134, 11, 0.12);
+}
+
 .pillar-visual {
     height: 200px;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 0;
+    border-radius: 0;
+    border: none;
 }
 
 .pillar-card h3 {
     font-size: var(--fs-h3);
-    margin-bottom: var(--spacing-md);
+    margin: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
 }
 
 .pillar-card p {
@@ -400,7 +419,7 @@
     line-height: 1.6;
     color: var(--color-text-secondary);
     min-height: 80px; /* Ensures all descriptions end at the same line */
-    margin-bottom: 0;
+    margin: 0 var(--spacing-lg) var(--spacing-lg);
 }
 
 /* 4. Process Section - Vertical Technical Axis */
@@ -1021,35 +1040,40 @@
         z-index: 1;
     }
     .floating-tech-tag {
-        background: #FFFFFF !important;
-        padding: 12px 10px;
-        gap: 2px;
+        background: var(--color-bg-soft) !important;
+        padding: 12px 18px;
+        gap: 4px;
         z-index: 20;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         position: absolute;
-        bottom: 35%;
-        width: 50%;
-        border-left: none !important;
+        width: auto;
+        border-left: 2px solid var(--color-accent) !important;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
     .floating-tech-tag span:first-child { 
-        font-size: 9px; 
+        font-size: 11px; 
         color: var(--color-accent) !important;
         letter-spacing: 1.5px;
     }
     .floating-tech-tag span:last-child { 
-        font-size: 11px; 
-        color: #1a1a1a !important; 
+        font-size: 13px; 
+        color: var(--color-text-primary) !important; 
     }
-    .tag-1 { left: 0; top: auto !important; right: auto !important; }
-    .tag-2 { 
-        right: 0; 
+    .tag-1 { 
+        top: 20% !important; 
+        right: -25px !important; 
         left: auto !important; 
-        bottom: 35% !important;
-        border-left: 1px solid rgba(212, 175, 55, 0.2) !important; 
+        bottom: auto !important; 
+    }
+    .tag-2 { 
+        bottom: 15% !important; 
+        left: -15px !important; 
+        right: auto !important; 
+        top: auto !important;
+        border-left: 2px solid var(--color-accent) !important; 
     }
 
     .team-grid {
